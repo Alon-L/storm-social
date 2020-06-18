@@ -3,6 +3,9 @@
 # ide configuration
 .idea
 
+# tailwind generated
+tailwind.generated.scss
+
 # dependencies
 /node_modules
 /.pnp
