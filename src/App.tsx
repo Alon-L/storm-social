@@ -1,12 +1,10 @@
-import React, { ReactNode } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import { Counter } from './features/counter/Counter';
 
-function App(): ReactNode {
+function App(): JSX.Element {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
