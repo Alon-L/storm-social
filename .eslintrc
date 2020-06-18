@@ -1,0 +1,68 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "react-app",
+    "airbnb",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "prettier/react",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "ignorePatterns": [
+    "react-app-env.d.ts"
+  ],
+  "plugins": [
+    "jsx-a11y",
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "env": {
+    "node": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
+  "rules": {
+    "react/prefer-stateless-function": "off",
+    "react/state-in-constructor": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "prettier/prettier": "error",
+    "class-methods-use-this": "off",
+    "no-plusplus": "off",
+    "no-underscore-dangle": "off",
+    "no-return-assign": "off",
+    "no-param-reassign": "off",
+    "no-console": "off"
+  }
+}

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 
-function App() {
+function App(): ReactNode {
   return (
     <div className="App">
       <header className="App-header">
