@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = (): JSX.Element => {
+const Home: React.FC = () => {
   return (
     <div>
       <p>Home!</p>
