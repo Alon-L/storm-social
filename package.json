@@ -22,8 +22,8 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "build:css": "postcss src/scss/tailwind.scss -o src/scss/tailwind.generated.scss",
-    "watch:css": "postcss src/scss/tailwind.scss -o src/scss/tailwind.generated.scss -w",
+    "build:css": "postcss src/scss/index.scss -o src/scss/index.generated.scss",
+    "watch:css": "postcss src/scss/index.scss -o src/scss/index.generated.scss -w",
     "start": "run-p watch:css start:react",
     "start:react": "react-scripts start",
     "build": "npm run build:css && react-scripts build",

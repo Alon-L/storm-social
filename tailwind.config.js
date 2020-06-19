@@ -1,8 +1,10 @@
 module.exports = {
   purge: [],
   theme: {
-    extend: {},
+    textColor: {
+      primary: '#1f2732',
+    },
   },
   variants: {},
   plugins: [],
-}
+};

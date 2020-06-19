@@ -4,7 +4,7 @@
 .idea
 
 # tailwind generated
-tailwind.generated.scss
+src/scss/index.generated.scss
 
 # dependencies
 /node_modules

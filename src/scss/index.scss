@@ -1,8 +1,11 @@
 //noinspection CssInvalidAtRule
 @tailwind base;
+
+@font-face {
+
+}
+
 //noinspection CssInvalidAtRule
 @tailwind components;
 //noinspection CssInvalidAtRule
 @tailwind utilities;
-
-@import './App';

@@ -4,7 +4,7 @@ import Navbar from './components/navs/navbar/Navbar';
 
 const App = (): JSX.Element => {
   return (
-    <div>
+    <div className="container mx-auto text-primary">
       <Navbar />
       <Routes />
     </div>
