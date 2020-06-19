@@ -30,9 +30,11 @@ export type NavbarItemProps =
   | NavbarItemImage;
 
 const NavbarItemWrapper: React.FC = (props: PropsWithChildren<unknown>) => {
+  const { children } = props;
+
   return (
     <div className="my-6 lg:m-6 uppercase font-semibold flex flex-col justify-center">
-      {props.children}
+      {children}
     </div>
   );
 };
@@ -65,7 +67,7 @@ const NavbarItem: React.FC<NavbarItemProps> = (props: NavbarItemProps) => {
     default:
       return (
         <div className="lg:m-6 lg:block hidden">
-          <img style={{ maxWidth: 250 }} src={props.src} alt={props.alt} />
+          <img width={250} src={props.src} alt={props.alt} />
         </div>
       );
   }

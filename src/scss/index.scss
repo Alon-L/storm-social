@@ -6,8 +6,31 @@
 
 @import '~hamburgers/dist/hamburgers.min.css';
 
-@import 'home';
-
 button:focus {
   @apply outline-none;
+}
+
+.home--main {
+  min-height: 650px;
+  height: calc(100vh - 136px);
+  background: no-repeat url('../assets/home/waves.svg') right 0 bottom 0;
+  background-size: auto 90%;
+
+  &--title {
+    word-spacing: .35rem;
+  }
+}
+
+.home--socials {
+  &--slider--desired {
+    &::before, &::after {
+      content: '';
+      @apply .mx-3;
+      @apply .h-px;
+      @apply .bg-black;
+      @apply .inline-block;
+      transform: translateY(-5px);
+      width: 1.5rem;
+    }
+  }
 }
