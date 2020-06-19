@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavbarItem, { NavbarItemProps, NavbarItemType } from './NavbarItem';
 import logo from '../../../assets/logo.png';
 
@@ -38,14 +38,35 @@ const navbarItems: NavbarItemProps[] = [
 ];
 
 const Navbar: React.FC = () => {
+  const [active, setActive] = useState(false);
+
   return (
-    <div className="flex justify-between -mx-6">
-      {navbarItems.map(item => (
-        <NavbarItem
-          key={item.type !== NavbarItemType.Image ? item.name : item.alt}
-          {...item}
-        />
-      ))}
+    <div className="container mx-auto">
+      <nav className="flex flex-row-reverse justify-between flex-no-wrap py-6 lg:flex-row lg:justify-around lg:py-0">
+        <div className="inline-block lg:hidden">
+          <button
+            className={`hamburger hamburger--collapse ${active && 'is-active'}`}
+            type="button"
+            onClick={() => setActive(!active)}
+          >
+            <span className="hamburger-box">
+              <span className="hamburger-inner" />
+            </span>
+          </button>
+        </div>
+        <div
+          className={`-mt-6 lg:mt-0 lg:flex lg:justify-between lg:w-full overflow-hidden transition-all duration-200 ease-in-out transform ${
+            !active && 'hidden'
+          }`}
+        >
+          {navbarItems.map(item => (
+            <NavbarItem
+              key={item.type !== NavbarItemType.Image ? item.name : item.alt}
+              {...item}
+            />
+          ))}
+        </div>
+      </nav>
     </div>
   );
 };

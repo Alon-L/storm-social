@@ -4,7 +4,7 @@ import Navbar from './components/navs/navbar/Navbar';
 
 const App: React.FC = () => {
   return (
-    <div className="container mx-auto text-primary">
+    <div className="text-primary">
       <Navbar />
       <Routes />
     </div>

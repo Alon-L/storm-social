@@ -32,6 +32,7 @@
     }
   },
   "rules": {
+    "prettier/prettier": "error",
     "react/prefer-stateless-function": "off",
     "react/state-in-constructor": "off",
     "react/jsx-props-no-spreading": "off",
@@ -46,6 +47,22 @@
         ]
       }
     ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "index",
+          "sibling",
+          "parent"
+        ],
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -58,7 +75,6 @@
     ],
     "import/prefer-default-export": "off",
     "react/destructuring-assignment": "off",
-    "prettier/prettier": "error",
     "class-methods-use-this": "off",
     "no-plusplus": "off",
     "no-underscore-dangle": "off",

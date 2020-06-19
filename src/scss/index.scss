@@ -1,8 +1,13 @@
-//noinspection CssInvalidAtRule
 @tailwind base;
-//noinspection CssInvalidAtRule
 @tailwind components;
-//noinspection CssInvalidAtRule
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+@import '~hamburgers/dist/hamburgers.min.css';
+
+@import 'home';
+
+button:focus {
+  @apply outline-none;
+}
