@@ -1,6 +1,7 @@
 /* eslint-disable */
 module.exports = {
   purge: [],
+  important: true,
   theme: {
     extend: {
       textColor: {

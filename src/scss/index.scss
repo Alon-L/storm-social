@@ -23,14 +23,16 @@ button:focus {
 
 .home--socials {
   &--slider--desired {
-    &::before, &::after {
-      content: '';
-      @apply .mx-3;
-      @apply .h-px;
-      @apply .bg-black;
-      @apply .inline-block;
-      transform: translateY(-5px);
-      width: 1.5rem;
+    @media (min-width: 400px) {
+      &::before, &::after {
+        content: '';
+        @apply .mx-3;
+        @apply .h-px;
+        @apply .bg-black;
+        @apply .inline-block;
+        transform: translateY(-5px);
+        width: 1.5rem;
+      }
     }
   }
 }

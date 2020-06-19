@@ -50,13 +50,13 @@ const homeSocials: HomeSocialProps[] = [
 
 const HomeSocials: React.FC = () => {
   return (
-    <section>
+    <section className="overflow-hidden">
       <div className="container mx-auto py-12 text-center">
         <div className="py-6">
           <h2 className="text-4xl font-semibold">Grow Your Social</h2>
           <p>Do not wait for tomorrow - start a new life today</p>
         </div>
-        <div className="home--socials relative flex justify-center items-center flex-wrap mb-12 -mx-10">
+        <div className="home--socials relative flex justify-center items-center flex-wrap mb-12 lg:-mx-10">
           <HomeSocialsDots className="top-0 right-0 translate-x-24 -translate-y-24" />
           {homeSocials.map(social => (
             <HomeSocial key={social.title} {...social} />
