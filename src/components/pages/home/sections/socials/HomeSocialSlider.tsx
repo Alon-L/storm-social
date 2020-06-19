@@ -14,7 +14,7 @@ const HomeSocialSlider: React.FC = () => {
   return (
     <div className="z-10 w-full px-10 py-6">
       <div className="bg-white p-5 shadow-soft-xl rounded-lg items-center justify-center flex">
-        <div className="w-1/2">
+        <div className="md:w-1/2">
           <h4 className="text-2xl font-semibold">
             Not Enough Followers for You?
           </h4>

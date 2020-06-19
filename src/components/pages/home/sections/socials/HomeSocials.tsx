@@ -56,7 +56,7 @@ const HomeSocials: React.FC = () => {
           <h2 className="text-4xl font-semibold">Grow Your Social</h2>
           <p>Do not wait for tomorrow - start a new life today</p>
         </div>
-        <div className="home--socials relative flex justify-between items-center flex-wrap">
+        <div className="home--socials relative flex justify-center items-center flex-wrap mb-12 -mx-10">
           <HomeSocialsDots className="top-0 right-0 translate-x-24 -translate-y-24" />
           {homeSocials.map(social => (
             <HomeSocial key={social.title} {...social} />
