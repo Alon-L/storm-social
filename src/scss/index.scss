@@ -23,7 +23,7 @@ $navbar-height: 136px;
   }
 }
 
-.home--socials {
+.socials {
   &--slider--desired {
     @media (min-width: 400px) {
       &::before, &::after {

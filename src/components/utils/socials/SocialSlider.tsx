@@ -8,7 +8,7 @@ const initialFollowers = 10000;
 // The number of dollars paid per follow
 const dollarsPerFollower = 0.005;
 
-const HomeSocialSlider: React.FC = () => {
+const SocialSlider: React.FC = () => {
   const [followers, setFollowers] = useState(initialFollowers);
 
   return (
@@ -18,7 +18,7 @@ const HomeSocialSlider: React.FC = () => {
           <h4 className="text-2xl font-semibold">
             Not Enough Followers for You?
           </h4>
-          <p className="home--socials--slider--desired opacity-70 inline-block">
+          <p className="socials--slider--desired opacity-70 inline-block">
             Slide to your desired amount
           </p>
           <div className="mt-8">
@@ -46,4 +46,4 @@ const HomeSocialSlider: React.FC = () => {
   );
 };
 
-export default HomeSocialSlider;
+export default SocialSlider;

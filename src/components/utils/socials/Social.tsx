@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export interface HomeSocialProps {
+export interface SocialProps {
   route: string;
   title: string;
   desc: string;
   src: string;
 }
 
-const HomeSocial: React.FC<HomeSocialProps> = (props: HomeSocialProps) => {
+const Social: React.FC<SocialProps> = (props: SocialProps) => {
   const { route, title, desc, src } = props;
 
   return (
@@ -24,4 +24,4 @@ const HomeSocial: React.FC<HomeSocialProps> = (props: HomeSocialProps) => {
   );
 };
 
-export default HomeSocial;
+export default Social;
