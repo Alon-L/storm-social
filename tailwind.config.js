@@ -22,6 +22,7 @@ module.exports = {
         primary: {
           '500': '#38c3fa',
           '700': '#05aff2',
+          '900': '#059edb',
         },
       },
       borderColor: {

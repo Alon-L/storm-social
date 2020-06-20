@@ -9,7 +9,7 @@ const HomeSocialsDots: React.FC<ComponentProps<'img'>> = (
   return (
     <img
       {...props}
-      className={`absolute transform z-0 ${className || ''}`}
+      className={`absolute transform z-0 select-none ${className || ''}`}
       src={dots}
       alt="Dots"
     />

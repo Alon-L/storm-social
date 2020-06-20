@@ -150,3 +150,24 @@ button.btn, a.btn {
     }
   }
 }
+
+.giveaway {
+  &--splash {
+    @media (min-width: 768px) {
+      width: 800px;
+    }
+
+    &--image {
+      @media (max-width: 767px) {
+        max-width: initial;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &--content {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 1);
+    line-height: 1.15;
+  }
+}

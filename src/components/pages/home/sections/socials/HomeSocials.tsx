@@ -5,16 +5,16 @@ import followers25k from '../../../../../assets/socials/followers_25k.png';
 import followers5k from '../../../../../assets/socials/followers_5k.png';
 import forbes from '../../../../../assets/socials/forbes.png';
 import tiktok from '../../../../../assets/socials/tiktok.png';
-import verified from '../../../../../assets/socials/verified.png';
+import verification from '../../../../../assets/socials/verification.png';
 import Social, { SocialProps } from '../../../../utils/socials/Social';
 import SocialSlider from '../../../../utils/socials/SocialSlider';
 
 const homeSocials: SocialProps[] = [
   {
-    route: '/products/verified',
-    title: 'Verified',
+    route: '/products/verification',
+    title: 'Verification',
     desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
-    src: verified,
+    src: verification,
   },
   {
     route: '/products/forbes',
