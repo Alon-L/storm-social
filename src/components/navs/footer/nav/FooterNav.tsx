@@ -29,11 +29,11 @@ const footerNavLists: FooterNavListProps[] = [
     fields: [
       {
         name: 'Current Giveaway',
-        route: '/giveaway/current',
+        route: '/giveaways/current',
       },
       {
         name: 'Previous Giveaway',
-        route: '/giveaway/previous',
+        route: '/giveaways/previous',
       },
     ],
   },
