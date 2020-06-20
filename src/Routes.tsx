@@ -8,8 +8,9 @@ import Navbar from './components/navs/navbar/Navbar';
 import About from './components/pages/about/About';
 import Contact from './components/pages/contact/Contact';
 import Giveaway from './components/pages/giveaways/Giveaway';
+import GrowthOrganic from './components/pages/growth/GrowthOrganic';
+import GrowthResults from './components/pages/growth/GrowthResults';
 import Home from './components/pages/home/Home';
-import OrganicGrowth from './components/pages/organic/growth/OrganicGrowth';
 import Product, { ProductProps } from './components/pages/product/Product';
 
 const products: (ProductProps & { path: string })[] = [
@@ -64,7 +65,10 @@ const Routes: React.FC = () => {
       </FullRoute>
 
       <FullRoute path="/growth/organic">
-        <OrganicGrowth />
+        <GrowthOrganic />
+      </FullRoute>
+      <FullRoute path="/growth/results">
+        <GrowthResults />
       </FullRoute>
 
       {products.map(product => (

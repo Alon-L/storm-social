@@ -1,11 +1,11 @@
 import React from 'react';
 import HomeSocialsDots from './HomeSocialsDots';
-import followers10k from '../../../../../assets/home/socials/followers_10k.png';
-import followers25k from '../../../../../assets/home/socials/followers_25k.png';
-import followers5k from '../../../../../assets/home/socials/followers_5k.png';
-import forbes from '../../../../../assets/home/socials/forbes.png';
-import tiktok from '../../../../../assets/home/socials/tiktok.png';
-import verified from '../../../../../assets/home/socials/verified.png';
+import followers10k from '../../../../../assets/socials/followers_10k.png';
+import followers25k from '../../../../../assets/socials/followers_25k.png';
+import followers5k from '../../../../../assets/socials/followers_5k.png';
+import forbes from '../../../../../assets/socials/forbes.png';
+import tiktok from '../../../../../assets/socials/tiktok.png';
+import verified from '../../../../../assets/socials/verified.png';
 import Social, { SocialProps } from '../../../../utils/socials/Social';
 import SocialSlider from '../../../../utils/socials/SocialSlider';
 
