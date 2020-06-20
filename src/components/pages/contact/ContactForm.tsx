@@ -8,7 +8,6 @@ const ContactForm: React.FC = () => {
   return (
     <form className="w-full">
       <input
-        className="contact--form--input"
         type="text"
         value={name}
         name="name"

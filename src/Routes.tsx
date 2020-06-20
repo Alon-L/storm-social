@@ -11,7 +11,9 @@ import Giveaway from './components/pages/giveaways/Giveaway';
 import GrowthOrganic from './components/pages/growth/GrowthOrganic';
 import GrowthResults from './components/pages/growth/GrowthResults';
 import Home from './components/pages/home/Home';
+import Memberships from './components/pages/memberships/Memberships';
 import Product, { ProductProps } from './components/pages/product/Product';
+import WipNotification from './components/utils/WIPNotification';
 
 const products: (ProductProps & { path: string })[] = [
   {
@@ -24,6 +26,26 @@ const products: (ProductProps & { path: string })[] = [
     src: verification,
   },
 ];
+
+/**
+ * Route that includes the WIP notification along with a navbar and a footer
+ * @param {React.PropsWithChildren<RouteProps>} props
+ * @returns {JSX.Element}
+ */
+const WIPFullRoute: React.FC<RouteProps> = (
+  props: PropsWithChildren<RouteProps>,
+) => {
+  const { children } = props;
+
+  return (
+    <Route {...props}>
+      <WipNotification />
+      <Navbar />
+      {children}
+      <Footer />
+    </Route>
+  );
+};
 
 /**
  * Route that includes a navbar and a footer
@@ -70,6 +92,10 @@ const Routes: React.FC = () => {
       <FullRoute path="/growth/results">
         <GrowthResults />
       </FullRoute>
+
+      <WIPFullRoute path="/memberships">
+        <Memberships />
+      </WIPFullRoute>
 
       {products.map(product => (
         <FullRoute key={product.path} path={product.path}>

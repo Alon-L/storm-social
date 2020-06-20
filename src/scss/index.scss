@@ -75,8 +75,7 @@ $navbar-height: 136px;
   }
 }
 
-.contact--form {
-  &--input {
+input {
     @apply w-full;
     @apply border-b-2;
     @apply border-primary-300;
@@ -92,8 +91,9 @@ $navbar-height: 136px;
       @apply text-primary;
       @apply font-medium;
     }
-  }
+}
 
+.contact--form {
   &--submit {
     @apply text-xl;
     @apply uppercase;
