@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SmoothCollapse from 'react-smooth-collapse';
 import NavbarItem, { NavbarItemProps, NavbarItemType } from './NavbarItem';
 import logo from '../../../assets/logo.png';
 import logoWhite from '../../../assets/logo_white.png';
@@ -32,6 +31,13 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
     {
       type: NavbarItemType.Dropdown,
       name: 'Giveaways',
+      routes: [
+        {
+          name: 'Current Giveaway',
+          route: '/giveaways/current',
+        },
+        { name: 'Previous Giveaway', route: '/giveaways/previous' },
+      ],
     },
     {
       type: NavbarItemType.Image,
@@ -41,10 +47,20 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
     {
       type: NavbarItemType.Dropdown,
       name: 'Growth',
+      routes: [
+        { name: 'Organic Growth', route: '/growth/organic' },
+        { name: 'Growth Results', route: '/growth/results' },
+      ],
     },
     {
       type: NavbarItemType.Dropdown,
-      name: 'Packages',
+      name: 'Products',
+      routes: [
+        { name: 'Verification', route: '/products/verification' },
+        { name: 'Forbes', route: '/products/forbes' },
+        { name: 'TikTok', route: '/products/tiktok' },
+        { name: 'Instagram Followers', route: '/products/followers' },
+      ],
     },
     {
       type: NavbarItemType.Route,
@@ -69,10 +85,10 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
             </span>
           </button>
         </div>
-        <SmoothCollapse
-          expanded={active}
-          eagerRender
-          className="navbar--collapse w-full"
+        <div
+          className={`-mt-6 transition-all duration-200 ease-in-out lg:mt-0 lg:flex lg:justify-center lg:w-full ${
+            !active && 'hidden'
+          }`}
         >
           {navbarItems.map(item => (
             <NavbarItem
@@ -80,7 +96,7 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
               {...item}
             />
           ))}
-        </SmoothCollapse>
+        </div>
       </nav>
     </div>
   );

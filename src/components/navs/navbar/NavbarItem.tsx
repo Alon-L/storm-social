@@ -1,5 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 import { Link } from 'react-router-dom';
+import NavbarDropdown from './NavbarDropdown';
 
 export enum NavbarItemType {
   Route,
@@ -16,6 +17,10 @@ export interface NavbarItemRoute {
 export interface NavbarItemDropdown {
   type: NavbarItemType.Dropdown;
   name: string;
+  routes: {
+    name: string;
+    route: string;
+  }[];
 }
 
 export interface NavbarItemImage {
@@ -45,7 +50,7 @@ const NavbarItem: React.FC<NavbarItemProps> = (props: NavbarItemProps) => {
       return (
         <NavbarItemWrapper>
           <Link
-            className="text-sm opacity-80 hover:opacity-100 transition-opacity duration-200 ease-in-out"
+            className="text-sm opacity-70 hover:opacity-100 transition-opacity duration-200 ease-in-out"
             to={props.route}
           >
             {props.name}
@@ -56,12 +61,19 @@ const NavbarItem: React.FC<NavbarItemProps> = (props: NavbarItemProps) => {
       // TODO: Implement dropdown
       return (
         <NavbarItemWrapper>
-          <Link
-            className="text-sm opacity-80 hover:opacity-100 transition-opacity duration-200 ease-in-out"
-            to={props.name}
-          >
-            {props.name}
-          </Link>
+          <NavbarDropdown name={props.name}>
+            <div className="flex flex-col">
+              {props.routes.map(({ name, route }) => (
+                <Link
+                  className="text-sm py-5 px-5 opacity-70 hover:opacity-100 transition-opacity duration-200 ease-in-out whitespace-no-wrap border-b-1 border-gray-300"
+                  key={name}
+                  to={route}
+                >
+                  {name}
+                </Link>
+              ))}
+            </div>
+          </NavbarDropdown>
         </NavbarItemWrapper>
       );
     default:
