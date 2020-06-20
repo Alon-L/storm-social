@@ -24,6 +24,26 @@ $navbar-height: 136px;
   }
 }
 
+.navbar--collapse {
+  & > div {
+    @apply -mt-6 overflow-hidden transition-all duration-200 ease-in-out;
+
+    @media (min-width: 1024px) {
+      @apply mt-0;
+      @apply flex;
+      @apply justify-between;
+      @apply w-full;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    height: initial !important;
+    overflow: initial !important;
+    display: initial !important;
+    transition: initial !important;
+  }
+}
+
 .home--main {
   min-height: 650px;
   background: no-repeat url('../assets/home/waves.svg') right 0 bottom 0;
@@ -177,5 +197,26 @@ button.btn, a.btn {
   &--content {
     text-shadow: 0 0 6px rgba(255, 255, 255, 1);
     line-height: 1.15;
+  }
+}
+
+.faq {
+  &--section {
+    &--box {
+      &:hover, &__active {
+        box-shadow: 0 0 0 2px #05aff2;
+
+        .faq--section--box--icon {
+          @apply opacity-100;
+          @apply text-brand-700;
+        }
+      }
+    }
+
+    &--question {
+      display: list-item;
+      list-style-type: disc;
+      list-style-position: inside;
+    }
   }
 }

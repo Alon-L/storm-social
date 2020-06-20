@@ -19,7 +19,7 @@ const FooterNavList: React.FC<FooterNavListProps> = (
       <h5 className="font-semibold mb-2">{title}</h5>
       <ul>
         {fields.map(({ name, route }) => (
-          <li>
+          <li key={name}>
             <Link className="hover:underline text-sm" to={route}>
               {name}
             </Link>

@@ -6,6 +6,7 @@ import Footer from './components/navs/footer/Footer';
 import Navbar from './components/navs/navbar/Navbar';
 import About from './components/pages/about/About';
 import Contact from './components/pages/contact/Contact';
+import Faq from './components/pages/faq/FAQ';
 import Giveaway, { Giveaways } from './components/pages/giveaways/Giveaway';
 import GrowthOrganic from './components/pages/growth/GrowthOrganic';
 import GrowthResults from './components/pages/growth/GrowthResults';
@@ -105,6 +106,10 @@ const Routes: React.FC = () => {
       <Route path="/contact">
         <Contact />
       </Route>
+
+      <FullRoute path="/faq">
+        <Faq />
+      </FullRoute>
 
       <FullRoute path="/giveaways/current">
         <Giveaway {...giveaways.current} />

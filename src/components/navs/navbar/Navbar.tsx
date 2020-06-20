@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SmoothCollapse from 'react-smooth-collapse';
 import NavbarItem, { NavbarItemProps, NavbarItemType } from './NavbarItem';
 import logo from '../../../assets/logo.png';
 import logoWhite from '../../../assets/logo_white.png';
@@ -68,10 +69,10 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
             </span>
           </button>
         </div>
-        <div
-          className={`-mt-6 lg:mt-0 overflow-hidden transition-all duration-200 ease-in-out transform ${
-            !active && 'hidden'
-          } lg:flex lg:justify-between lg:w-full`}
+        <SmoothCollapse
+          expanded={active}
+          eagerRender
+          className="navbar--collapse w-full"
         >
           {navbarItems.map(item => (
             <NavbarItem
@@ -79,7 +80,7 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
               {...item}
             />
           ))}
-        </div>
+        </SmoothCollapse>
       </nav>
     </div>
   );
