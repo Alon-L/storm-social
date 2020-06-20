@@ -111,10 +111,10 @@ const Routes: React.FC = () => {
         <Faq />
       </FullRoute>
 
-      <FullRoute path="/giveaway/current">
+      <FullRoute path="/giveaways/current">
         <Giveaway {...giveaways.current} />
       </FullRoute>
-      <FullRoute path="/giveaway/previous">
+      <FullRoute path="/giveaways/previous">
         <Giveaway {...giveaways.previous} />
       </FullRoute>
 
