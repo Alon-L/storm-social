@@ -22,10 +22,10 @@ const HomeMain: React.FC = () => {
                 weekly basis!
               </p>
               <div className="buttons flex flex-col justify-center items-center md:flex-row md:justify-start md:items-start">
-                <Button className="mr-0 mb-2 md:mr-6 md:mb-0">
+                <Button href="#" className="mr-0 mb-2 md:mr-6 md:mb-0">
                   View Packages
                 </Button>
-                <ButtonOutline>How does it work?</ButtonOutline>
+                <ButtonOutline href="#">How does it work?</ButtonOutline>
               </div>
             </div>
             <div className="w-2/5 flex flex-col justify-end hidden md:flex">

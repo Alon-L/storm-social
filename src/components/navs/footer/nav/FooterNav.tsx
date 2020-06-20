@@ -54,20 +54,20 @@ const footerNavLists: FooterNavListProps[] = [
     title: 'Packages',
     fields: [
       {
-        name: 'Verified',
-        route: '/packages/verified',
+        name: 'Verification',
+        route: '/products/verification',
       },
       {
         name: 'Forbes',
-        route: '/packages/forbes',
+        route: '/products/forbes',
       },
       {
         name: 'TikTok',
-        route: '/packages/tiktok',
+        route: '/products/tiktok',
       },
       {
         name: 'Instagram Followers',
-        route: '/packages/followers',
+        route: '/products/followers',
       },
     ],
   },
