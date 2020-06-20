@@ -51,7 +51,7 @@ const homeSocials: HomeSocialProps[] = [
 const HomeSocials: React.FC = () => {
   return (
     <section className="overflow-hidden">
-      <div className="container mx-auto py-12 text-center">
+      <div className="container py-12 text-center">
         <div className="py-6">
           <h2 className="text-4xl font-semibold">Grow Your Social</h2>
           <p>Do not wait for tomorrow - start a new life today</p>

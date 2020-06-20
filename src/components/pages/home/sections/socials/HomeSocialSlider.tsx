@@ -12,7 +12,7 @@ const HomeSocialSlider: React.FC = () => {
   const [followers, setFollowers] = useState(initialFollowers);
 
   return (
-    <div className="z-10 w-full px-10 py-6">
+    <div className="z-10 w-full md:px-10 py-6">
       <div className="bg-white p-5 shadow-soft-xl rounded-lg items-center justify-center flex">
         <div className="md:w-1/2">
           <h4 className="text-2xl font-semibold">

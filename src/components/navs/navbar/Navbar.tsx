@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <div className="container mx-auto">
+    <div className="container">
       <nav className="flex flex-row-reverse justify-between flex-no-wrap py-6 lg:flex-row lg:justify-around lg:py-0">
         <div className="inline-block lg:hidden">
           <button
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
           </button>
         </div>
         <div
-          className={`-mt-6 lg:mt-0 overflow-hidden transition-all duration-200 ease-in-out transform ml-4 lg:ml-4 ${
+          className={`-mt-6 lg:mt-0 overflow-hidden transition-all duration-200 ease-in-out transform ${
             !active && 'hidden'
           } lg:flex lg:justify-between lg:w-full`}
         >

@@ -3,6 +3,13 @@ module.exports = {
   purge: [],
   important: true,
   theme: {
+    container: {
+      center: true,
+      padding: {
+        default: '1rem',
+        lg: 0,
+      },
+    },
     extend: {
       textColor: {
         primary: '#1f2732',

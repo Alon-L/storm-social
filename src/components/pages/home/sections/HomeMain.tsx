@@ -7,9 +7,9 @@ const HomeMain: React.FC = () => {
   return (
     <section>
       <div className="home--main">
-        <div className="container mx-auto h-full flex justify-center content-center">
+        <div className="container h-full flex justify-center content-center">
           <div className="flex w-full py-16">
-            <div className="w-full px-3 md:w-3/5 md:px-0">
+            <div className="w-full md:w-3/5">
               <h1 className="home--main--title text-3xl md:text-5xl font-bold">
                 Active. Effective. Engaging.
               </h1>
