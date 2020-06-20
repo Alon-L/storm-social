@@ -1,7 +1,5 @@
 import React from 'react';
 import phone from '../../../../assets/home/phone.png';
-import Button from '../../../utils/buttons/Button';
-import ButtonOutline from '../../../utils/buttons/ButtonOutline';
 
 const HomeMain: React.FC = () => {
   return (
@@ -22,10 +20,12 @@ const HomeMain: React.FC = () => {
                 weekly basis!
               </p>
               <div className="buttons flex flex-col justify-center items-center md:flex-row md:justify-start md:items-start">
-                <Button href="#" className="mr-0 mb-2 md:mr-6 md:mb-0">
+                <button type="button" className="btn mr-0 mb-2 md:mr-6 md:mb-0">
                   View Packages
-                </Button>
-                <ButtonOutline href="#">How does it work?</ButtonOutline>
+                </button>
+                <button type="button" className="btn btn__outline">
+                  How does it work?
+                </button>
               </div>
             </div>
             <div className="w-2/5 flex flex-col justify-end hidden md:flex">

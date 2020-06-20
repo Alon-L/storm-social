@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../../utils/buttons/Button';
 
 export interface ProductProps {
   title: string;
@@ -25,9 +24,9 @@ const Product: React.FC<ProductProps> = (props: ProductProps) => {
           <h1 className="text-3xl font-semibold mb-3">Ready to order?</h1>
           <p>{readyToOrder}</p>
         </div>
-        <Button href="#" className="px-16">
+        <button type="button" className="btn px-16">
           Buy Now!
-        </Button>
+        </button>
       </div>
     </div>
   );
