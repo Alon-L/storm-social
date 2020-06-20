@@ -12,9 +12,20 @@ button:focus {
 
 $navbar-height: 136px;
 
+.full-height {
+  height: calc(100vh - #{$navbar-height});
+}
+
+.hamburger-white {
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background: white !important;
+  }
+}
+
 .home--main {
   min-height: 650px;
-  height: calc(100vh - #{$navbar-height});
   background: no-repeat url('../assets/home/waves.svg') right 0 bottom 0;
   background-size: auto 90%;
 
@@ -40,37 +51,30 @@ $navbar-height: 136px;
 }
 
 .contact {
-  &--column {
-    min-height: 650px;
-    padding-top: $navbar-height;
-    @apply px-20;
-
-    @media (min-width: 1024px) {
-      padding-top: calc(#{$navbar-height} + 5%);
-      height: 100vh;
-    }
-  }
+  padding-bottom: 3px;
 
   &--background {
+    min-height: 750px;
+
     &:after, &:before {
       content: '';
-      height: 100%;
       width: 100%;
+      height: 100%;
       display: inline-block;
       position: absolute;
-      top: 0;
-      right: 0;
+      bottom: 0;
+      left: 0;
       z-index: -1;
     }
 
     &:before {
-      background: rgb(49, 49, 49);
+      background: rgb(21, 23, 40);
     }
 
     &:after {
       background: url('../assets/contact/background.png') no-repeat;
       background-size: cover;
-      opacity: .1;
+      opacity: .05;
     }
   }
 }
@@ -126,14 +130,15 @@ button.btn, a.btn {
     @apply font-medium;
     @apply opacity-60;
     @apply transition-opacity duration-200 ease-in-out;
-    @apply mt-8;
     @apply relative;
+    @apply text-left;
 
     &:before {
       @apply bg-primary-500;
       @apply w-1/2;
       @apply absolute;
       @apply h-1;
+      @apply left-0;
       @apply bottom-0;
       @apply transform translate-y-2;
       @apply transition-all duration-200 ease-in-out;
@@ -144,8 +149,11 @@ button.btn, a.btn {
       @apply opacity-90;
 
       &:before {
+        @media (min-width: 360px) {
+          @apply w-full;
+        }
+
         @apply bg-primary-700;
-        @apply w-full;
       }
     }
   }

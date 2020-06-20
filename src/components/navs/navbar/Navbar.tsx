@@ -1,53 +1,65 @@
 import React, { useState } from 'react';
 import NavbarItem, { NavbarItemProps, NavbarItemType } from './NavbarItem';
 import logo from '../../../assets/logo.png';
+import logoWhite from '../../../assets/logo_white.png';
 
-const navbarItems: NavbarItemProps[] = [
-  {
-    type: NavbarItemType.Route,
-    name: 'Home',
-    route: '/',
-  },
-  {
-    type: NavbarItemType.Route,
-    name: 'About Us',
-    route: '/about',
-  },
-  {
-    type: NavbarItemType.Dropdown,
-    name: 'Giveaways',
-  },
-  {
-    type: NavbarItemType.Image,
-    src: logo,
-    alt: 'Logo',
-  },
-  {
-    type: NavbarItemType.Dropdown,
-    name: 'Growth',
-  },
-  {
-    type: NavbarItemType.Dropdown,
-    name: 'Packages',
-  },
-  {
-    type: NavbarItemType.Route,
-    name: 'Members',
-    route: '/memberships',
-  },
-];
+export enum NavbarTheme {
+  Light,
+  Dark,
+}
 
-const Navbar: React.FC = () => {
+interface NavbarProps {
+  theme?: NavbarTheme;
+}
+
+const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
+  const { theme = NavbarTheme.Dark } = props;
+
   const [active, setActive] = useState(false);
 
+  const navbarItems: NavbarItemProps[] = [
+    {
+      type: NavbarItemType.Route,
+      name: 'Home',
+      route: '/',
+    },
+    {
+      type: NavbarItemType.Route,
+      name: 'About Us',
+      route: '/about',
+    },
+    {
+      type: NavbarItemType.Dropdown,
+      name: 'Giveaways',
+    },
+    {
+      type: NavbarItemType.Image,
+      src: theme === NavbarTheme.Light ? logoWhite : logo,
+      alt: 'Logo',
+    },
+    {
+      type: NavbarItemType.Dropdown,
+      name: 'Growth',
+    },
+    {
+      type: NavbarItemType.Dropdown,
+      name: 'Packages',
+    },
+    {
+      type: NavbarItemType.Route,
+      name: 'Members',
+      route: '/memberships',
+    },
+  ];
+
   return (
-    <div className="container">
+    <div className={`container ${theme === NavbarTheme.Light && 'text-white'}`}>
       <nav className="flex flex-row-reverse justify-between flex-no-wrap py-6 lg:flex-row lg:justify-around lg:py-0">
         <div className="inline-block lg:hidden">
           <button
             className={`hamburger hamburger--collapse -mt-2 ${
               active && 'is-active'
-            }`}
+            } ${theme === NavbarTheme.Light && 'hamburger-white'}`}
             type="button"
             onClick={() => setActive(!active)}
           >

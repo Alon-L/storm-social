@@ -4,18 +4,20 @@ import React from 'react';
 
 export interface ContactFormSocialProps {
   icon: IconDefinition;
-  name: string;
   url: string;
 }
 
 const ContactFormSocial: React.FC<ContactFormSocialProps> = (
   props: ContactFormSocialProps,
 ) => {
-  const { icon, name, url } = props;
+  const { icon, url } = props;
 
   return (
-    <a className="font-semibold text-2xl mb-8" href={url}>
-      <FontAwesomeIcon className="mr-2" icon={icon} /> {name}
+    <a className="font-semibold text-2xl sm:mr-3" href={url}>
+      <FontAwesomeIcon
+        className="mr-2 transition-colors duration-200 ease-in-out hover:text-brand-500"
+        icon={icon}
+      />
     </a>
   );
 };

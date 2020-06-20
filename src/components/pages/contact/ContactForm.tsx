@@ -1,4 +1,25 @@
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
 import React, { ChangeEvent, useState } from 'react';
+import ContactFormSocial, { ContactFormSocialProps } from './ContactFormSocial';
+
+const contactFormSocials: ContactFormSocialProps[] = [
+  {
+    icon: faFacebook,
+    url: 'https://facebook.com',
+  },
+  {
+    icon: faTwitter,
+    url: 'https://twitter.com',
+  },
+  {
+    icon: faInstagram,
+    url: 'https://instagram.com',
+  },
+];
 
 const ContactForm: React.FC = () => {
   const [name, setName] = useState('');
@@ -34,9 +55,19 @@ const ContactForm: React.FC = () => {
           setMessage(e.target.value)
         }
       />
-      <button className="contact--form--submit" type="submit">
-        Submit Message
-      </button>
+      <div className="flex justify-between mt-8">
+        <button className="contact--form--submit" type="submit">
+          Submit Message
+        </button>
+        <div className="flex flex-wrap justify-end">
+          {contactFormSocials.map(contactFormSocial => (
+            <ContactFormSocial
+              key={contactFormSocial.url}
+              {...contactFormSocial}
+            />
+          ))}
+        </div>
+      </div>
     </form>
   );
 };

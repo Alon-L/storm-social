@@ -4,7 +4,7 @@ import phone from '../../../../assets/home/phone.png';
 const HomeMain: React.FC = () => {
   return (
     <section>
-      <div className="home--main">
+      <div className="home--main full-height">
         <div className="container h-full flex justify-center content-center">
           <div className="flex w-full py-16">
             <div className="w-full md:w-3/5">

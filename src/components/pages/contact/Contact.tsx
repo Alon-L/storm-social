@@ -1,54 +1,20 @@
-import {
-  faFacebook,
-  faInstagram,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
 import ContactForm from './ContactForm';
-import ContactFormSocial, { ContactFormSocialProps } from './ContactFormSocial';
-import ContactNavbar from '../../navs/navbar/contact/ContactNavbar';
-
-const contactFormSocials: ContactFormSocialProps[] = [
-  {
-    icon: faFacebook,
-    name: 'Facebook',
-    url: 'https://facebook.com',
-  },
-  {
-    icon: faTwitter,
-    name: 'Twitter',
-    url: 'https://twitter.com',
-  },
-  {
-    icon: faInstagram,
-    name: 'Instagram',
-    url: 'https://instagram.com',
-  },
-];
+import Navbar, { NavbarTheme } from '../../navs/navbar/Navbar';
 
 const Contact: React.FC = () => {
   return (
-    <>
-      <ContactNavbar />
-      <div className="flex lg:flex-nowrap flex-wrap h-screen">
-        <div className="contact--column lg:w-1/2 w-full">
-          <div>
-            <h1 className="text-5xl font-bold mb-16">Contact Us</h1>
-            <ContactForm />
-          </div>
-        </div>
-        <div className="contact--column contact--background relative lg:w-1/2 w-full">
-          <div className="mt-32 flex flex-col justify-around h-1/3 lg:px-16 text-white">
-            {contactFormSocials.map(contactFormSocial => (
-              <ContactFormSocial
-                key={contactFormSocial.name}
-                {...contactFormSocial}
-              />
-            ))}
-          </div>
+    <div className="contact relative">
+      <Navbar theme={NavbarTheme.Light} />
+      <div className="contact--background full-height container flex items-center justify-center">
+        <div className="shadow-lg mx-auto bg-white -mt-32 lg:w-3/5 sm:p-12 py-8 px-4 rounded-lg">
+          <h1 className="text-3xl sm:text-5xl font-bold mb-16 text-center">
+            Contact Us
+          </h1>
+          <ContactForm />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
