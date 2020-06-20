@@ -10,9 +10,11 @@ button:focus {
   @apply outline-none;
 }
 
+$navbar-height: 136px;
+
 .home--main {
   min-height: 650px;
-  height: calc(100vh - 136px);
+  height: calc(100vh - #{$navbar-height});
   background: no-repeat url('../assets/home/waves.svg') right 0 bottom 0;
   background-size: auto 90%;
 
@@ -32,6 +34,92 @@ button:focus {
         @apply .inline-block;
         transform: translateY(-5px);
         width: 1.5rem;
+      }
+    }
+  }
+}
+
+.contact {
+  &--column {
+    min-height: 650px;
+    padding-top: $navbar-height;
+    @apply px-20;
+
+    @media (min-width: 1024px) {
+      padding-top: calc(#{$navbar-height} + 5%);
+      height: 100vh;
+    }
+  }
+
+  &--background {
+    &:after, &:before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    &:before {
+      background: rgb(49, 49, 49);
+    }
+
+    &:after {
+      background: url('../assets/contact/background.png') no-repeat;
+      background-size: cover;
+      opacity: .1;
+    }
+  }
+}
+
+.contact--form {
+  &--input {
+    @apply w-full;
+    @apply border-b-2;
+    @apply border-primary-300;
+    @apply p-4;
+    @apply transition-all duration-200 ease-in-out;
+    @apply mb-8;
+
+    &:focus {
+      @apply border-primary-900;
+    }
+
+    &::placeholder {
+      @apply text-primary;
+      @apply font-medium;
+    }
+  }
+
+  &--submit {
+    @apply text-xl;
+    @apply uppercase;
+    @apply font-medium;
+    @apply opacity-60;
+    @apply transition-opacity duration-200 ease-in-out;
+    @apply mt-8;
+    @apply relative;
+
+    &:before {
+      @apply bg-primary-500;
+      @apply w-1/2;
+      @apply absolute;
+      @apply h-1;
+      @apply bottom-0;
+      @apply transform translate-y-2;
+      @apply transition-all duration-200 ease-in-out;
+      content: '';
+    }
+
+    &:hover {
+      @apply opacity-90;
+
+      &:before {
+        @apply bg-primary-700;
+        @apply w-full;
       }
     }
   }

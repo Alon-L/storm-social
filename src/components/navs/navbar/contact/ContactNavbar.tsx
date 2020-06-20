@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import NavbarItem, { NavbarItemProps, NavbarItemType } from './NavbarItem';
-import logo from '../../../assets/logo.png';
+import logo from '../../../../assets/logo.png';
+import NavbarItem, { NavbarItemProps, NavbarItemType } from '../NavbarItem';
 
 const navbarItems: NavbarItemProps[] = [
   {
@@ -18,30 +18,16 @@ const navbarItems: NavbarItemProps[] = [
     name: 'Giveaways',
   },
   {
-    type: NavbarItemType.Image,
-    src: logo,
-    alt: 'Logo',
-  },
-  {
     type: NavbarItemType.Dropdown,
     name: 'Growth',
   },
-  {
-    type: NavbarItemType.Dropdown,
-    name: 'Packages',
-  },
-  {
-    type: NavbarItemType.Route,
-    name: 'Members',
-    route: '/memberships',
-  },
 ];
 
-const Navbar: React.FC = () => {
+const ContactNavbar: React.FC = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <div className="container">
+    <div className="px-16 fixed z-10 left-0 right-0 lg:bg-transparent bg-white">
       <nav className="flex flex-row-reverse justify-between flex-no-wrap py-6 lg:flex-row lg:justify-around lg:py-0">
         <div className="inline-block lg:hidden">
           <button
@@ -61,16 +47,21 @@ const Navbar: React.FC = () => {
             !active && 'hidden'
           } lg:flex lg:justify-between lg:w-full`}
         >
-          {navbarItems.map(item => (
-            <NavbarItem
-              key={item.type !== NavbarItemType.Image ? item.name : item.alt}
-              {...item}
-            />
-          ))}
+          <div>
+            <NavbarItem type={NavbarItemType.Image} src={logo} alt="Logo" />
+          </div>
+          <div className="lg:flex lg:justify-start lg:text-white lg:w-1/2 xl:pl-32 text-black">
+            {navbarItems.map(item => (
+              <NavbarItem
+                key={item.type !== NavbarItemType.Image ? item.name : item.alt}
+                {...item}
+              />
+            ))}
+          </div>
         </div>
       </nav>
     </div>
   );
 };
 
-export default Navbar;
+export default ContactNavbar;

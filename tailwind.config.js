@@ -26,8 +26,10 @@ module.exports = {
       },
       borderColor: {
         primary: {
+          '300': '#55caf8',
           '500': '#38c3fa',
           '700': '#05aff2',
+          '900': '#059edb',
         },
       },
       borderWidth: {
