@@ -7,7 +7,7 @@ import Navbar from './components/navs/navbar/Navbar';
 import About from './components/pages/about/About';
 import Contact from './components/pages/contact/Contact';
 import Faq from './components/pages/faq/FAQ';
-import Giveaway, { Giveaways } from './components/pages/giveaways/Giveaway';
+import Giveaway, { Giveaways } from './components/pages/giveaway/Giveaway';
 import GrowthOrganic from './components/pages/growth/GrowthOrganic';
 import GrowthResults from './components/pages/growth/GrowthResults';
 import Home from './components/pages/home/Home';
