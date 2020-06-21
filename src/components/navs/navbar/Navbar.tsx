@@ -57,7 +57,7 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
       name: 'Products',
       routes: [
         { name: 'Verification', route: '/products/verification' },
-        { name: 'Forbes', route: '/products/forbes' },
+        { name: 'Articles', route: '/products/articles' },
         { name: 'TikTok', route: '/products/tiktok' },
         { name: 'Instagram Followers', route: '/products/followers' },
       ],

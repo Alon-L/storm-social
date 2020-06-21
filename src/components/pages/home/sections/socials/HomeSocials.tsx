@@ -17,8 +17,8 @@ const homeSocials: SocialProps[] = [
     src: verification,
   },
   {
-    route: '/products/forbes',
-    title: 'Forbes',
+    route: '/products/artices',
+    title: 'Articles',
     desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
     src: forbes,
   },
