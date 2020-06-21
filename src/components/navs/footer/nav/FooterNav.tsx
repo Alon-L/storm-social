@@ -58,8 +58,8 @@ const footerNavLists: FooterNavListProps[] = [
         route: '/products/verification',
       },
       {
-        name: 'Forbes',
-        route: '/products/forbes',
+        name: 'Articles',
+        route: '/products/articles',
       },
       {
         name: 'TikTok',
@@ -86,7 +86,7 @@ const FooterNav: React.FC = () => {
   return (
     <div className="flex justify-between flex-wrap mb-6">
       <div className="w-full flex sm:w-auto sm:block justify-center">
-        <img width={200} src={logo} alt="Logo" />
+        <img width={200} height={70} src={logo} alt="Logo" />
       </div>
       {footerNavLists.map(footerNavList => (
         <FooterNavList key={footerNavList.title} {...footerNavList} />
