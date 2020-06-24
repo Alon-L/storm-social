@@ -13,10 +13,15 @@ const FooterSocial: React.FC<FooterSocialProps> = (
   const { url, icon } = props;
 
   return (
-    <a className="mr-4" href={url} target="_blank" rel="noopener noreferrer">
+    <a
+      className="mx-3 sm:mx-0"
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <FontAwesomeIcon
         className="transition-all duration-200 ease-in-out opacity-75 hover:opacity-100 hover:text-brand-500"
-        size="2x"
+        size="lg"
         icon={icon}
       />
     </a>

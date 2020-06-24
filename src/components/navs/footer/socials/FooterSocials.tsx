@@ -28,13 +28,10 @@ const footerSocials: FooterSocialProps[] = [
 
 const FooterSocials: React.FC = () => {
   return (
-    <div className="border-t-1 border-gray-400 py-3 text-center sm:text-left">
-      <p className="mb-3">Follow our social medias</p>
-      <div>
-        {footerSocials.map(footerSocial => (
-          <FooterSocial key={footerSocial.url} {...footerSocial} />
-        ))}
-      </div>
+    <div className="mt-3 flex justify-between sm:w-auto">
+      {footerSocials.map(footerSocial => (
+        <FooterSocial key={footerSocial.url} {...footerSocial} />
+      ))}
     </div>
   );
 };
