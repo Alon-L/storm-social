@@ -56,10 +56,10 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
       type: NavbarItemType.Dropdown,
       name: 'Products',
       routes: [
+        { name: 'Instagram Followers', route: '/products/followers' },
         { name: 'Verification', route: '/products/verification' },
         { name: 'Articles', route: '/products/articles' },
         { name: 'TikTok', route: '/products/tiktok' },
-        { name: 'Instagram Followers', route: '/products/followers' },
       ],
     },
     {
