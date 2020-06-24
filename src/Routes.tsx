@@ -20,9 +20,10 @@ const products: (ProductProps & { path: string })[] = [
     path: '/products/verification',
     title: 'Verification',
     desc:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto corporis cum dolorem eum facilis hic impedit ipsa iure labore, laboriosam, laudantium pariatur, perspiciatis placeat provident quia rem repudiandae vel?',
+      'Why you need this? Instagram Verification is best way to establish your Brand or Influencer profile. Instagram prioritise verified accounts pushing you or your brand to the top of the search & comment sections, driving more traffic to your desired account!',
     readyToOrder:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto corporis cum dolorem eum facilis hic impedit ipsa iure labore, laboriosam, laudantium pariatur, perspiciatis placeat provident quia rem repudiandae vel?',
+      'By purchasing this service Storm Social Will provide you with an Instagram Verification Tick to your desired account. Please note when purchasing this service you must require a min. Of 5 featured articles. Don’t have any articles? Click here',
+    price: 5999.99,
     src: verification,
   },
 ];
