@@ -33,7 +33,7 @@ const NavbarDropdown: React.FC<NavbarDropdownProps> = (
       </button>
       <div
         className={`shadow-md
-         rounded-lg absolute bg-white transform translate-y-2 z-10 ${
+         rounded-lg absolute bg-white transform translate-y-2 z-50 ${
            !active && 'hidden'
          }`}
       >
