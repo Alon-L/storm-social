@@ -40,6 +40,9 @@ const SocialSlider: React.FC = () => {
               }}
             />
           </div>
+          <button type="button" className="btn w-full mt-8 sm:w-1/2">
+            Buy Now!
+          </button>
         </div>
       </div>
     </div>
