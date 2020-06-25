@@ -28,6 +28,36 @@ $navbar-height: 136px;
   min-height: 650px;
   background: no-repeat url('../assets/home/waves.svg') right 0 bottom 0;
   background-size: auto 90%;
+  @apply z-10 relative;
+  @apply text-white;
+
+  &--bg {
+    position: relative;
+
+    &::before {
+      content: '';
+      top: 0;
+      left: 0;
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://qtxasset.com/styles/breakpoint_xl_880px_w/s3/hotelmanagement/1585673052/los-angeles.jpg/los-angeles.jpg?g1BfQfXM6UsZbr7SR0.Z_KHBvupazR_1&itok=aRNZ51lG') no-repeat left 0 top -150px;
+      background-size: 100%;
+    }
+
+    &::after {
+      content: '';
+      top: 0;
+      left: 0;
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, .7);
+      background-size: 100% 100%;
+    }
+  }
 
   &--title {
     word-spacing: .35rem;
