@@ -3,7 +3,7 @@ import Routes from './Routes';
 
 const App: React.FC = () => {
   return (
-    <div className="text-primary">
+    <div className="text-primary min-h-screen flex flex-col justify-between">
       <Routes />
     </div>
   );
