@@ -1,9 +1,9 @@
 import React from 'react';
-import followers10k from '../../../assets/socials/followers_10k.png';
-import followers25k from '../../../assets/socials/followers_25k.png';
-import followers5k from '../../../assets/socials/followers_5k.png';
-import Social, { SocialProps } from '../../utils/socials/Social';
-import SocialSlider from '../../utils/socials/SocialSlider';
+import followers10k from '../../../../assets/socials/followers_10k.png';
+import followers25k from '../../../../assets/socials/followers_25k.png';
+import followers5k from '../../../../assets/socials/followers_5k.png';
+import Social, { SocialProps } from '../../../utils/socials/Social';
+import SocialSlider from '../../../utils/socials/SocialSlider';
 
 const socials: SocialProps[] = [
   {
@@ -26,7 +26,7 @@ const socials: SocialProps[] = [
   },
 ];
 
-const GrowthOrganic: React.FC = () => {
+const ProductFollowers: React.FC = () => {
   return (
     <div className="container text-center">
       <div className="mb-12 w-4/5 mx-auto">
@@ -48,4 +48,4 @@ const GrowthOrganic: React.FC = () => {
   );
 };
 
-export default GrowthOrganic;
+export default ProductFollowers;

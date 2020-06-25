@@ -10,6 +10,9 @@ module.exports = {
         lg: 0,
       },
     },
+    paintOrder: {
+      'sf': { paintOrder: 'stroke fill' },
+    },
     extend: {
       textColor: {
         primary: '#1f2732',
@@ -55,8 +58,12 @@ module.exports = {
       fontFamily: {
         sans: ['Poppins', 'sans-serif']
       },
+      fontSize: {
+        '7xl': '5rem',
+        '8xl': '6rem',
+      },
     },
   },
   variants: {},
-  plugins: [require('tailwind-percentage-heights-plugin')()]
+  plugins: [require('tailwind-percentage-heights-plugin')(), require('tailwindcss-text-fill-stroke')()]
 };

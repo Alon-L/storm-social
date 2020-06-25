@@ -4,15 +4,16 @@ import giveawayImage from './assets/giveaway/giveaway_image.png';
 import verification from './assets/products/verification.png';
 import Footer from './components/navs/footer/Footer';
 import Navbar from './components/navs/navbar/Navbar';
+import Page404 from './components/pages/404/Page404';
 import About from './components/pages/about/About';
 import Contact from './components/pages/contact/Contact';
 import Faq from './components/pages/faq/FAQ';
 import Giveaway, { Giveaways } from './components/pages/giveaway/Giveaway';
-import GrowthOrganic from './components/pages/growth/GrowthOrganic';
 import GrowthResults from './components/pages/growth/GrowthResults';
 import Home from './components/pages/home/Home';
 import Memberships from './components/pages/memberships/Memberships';
 import Product, { ProductProps } from './components/pages/product/Product';
+import ProductFollowers from './components/pages/product/followers/ProductFollowers';
 import WipNotification from './components/utils/WIPNotification';
 
 const products: (ProductProps & { path: string })[] = [
@@ -119,9 +120,6 @@ const Routes: React.FC = () => {
         <Giveaway {...giveaways.previous} />
       </FullRoute>
 
-      <FullRoute path="/growth/organic">
-        <GrowthOrganic />
-      </FullRoute>
       <FullRoute path="/growth/results">
         <GrowthResults />
       </FullRoute>
@@ -135,6 +133,13 @@ const Routes: React.FC = () => {
           <Product {...product} />
         </FullRoute>
       ))}
+      <FullRoute path="/products/followers">
+        <ProductFollowers />
+      </FullRoute>
+
+      <FullRoute path="*">
+        <Page404 />
+      </FullRoute>
     </Switch>
   );
 };

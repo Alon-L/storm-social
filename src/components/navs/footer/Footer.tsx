@@ -39,19 +39,6 @@ const footerNavLists: FooterNavListProps[] = [
     ],
   },
   {
-    title: 'Growth',
-    fields: [
-      {
-        name: 'Organic Growth',
-        route: '/growth/organic',
-      },
-      {
-        name: 'Growth Results',
-        route: '/growth/results',
-      },
-    ],
-  },
-  {
     title: 'Packages',
     fields: [
       {
@@ -78,6 +65,10 @@ const footerNavLists: FooterNavListProps[] = [
       {
         name: 'Memberships',
         route: '/memberships',
+      },
+      {
+        name: 'Growth Results',
+        route: '/growth/results',
       },
     ],
   },
