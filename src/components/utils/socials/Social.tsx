@@ -1,26 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SocialContainer from './SocialContainer';
+import SocialContent, { SocialContentProps } from './SocialContent';
 
-export interface SocialProps {
+export interface SocialProps extends SocialContentProps {
   route: string;
-  title: string;
-  desc: string;
-  src: string;
 }
 
 const Social: React.FC<SocialProps> = (props: SocialProps) => {
-  const { route, title, desc, src } = props;
+  const { route, button } = props;
 
   return (
-    <div className="z-10 w-full lg:w-1/3 md:px-10 py-6">
-      <Link to={route}>
-        <div className="transition-transform duration-200 ease-in-out transform hover:-translate-y-4 bg-white shadow-soft-xl rounded-lg p-5 flex justify-center flex-col items-center">
-          <img className="rounded" width={140} src={src} alt="title" />
-          <h3 className="mt-3 text-xl font-semibold">{title}</h3>
-          <p className="mt-3">{desc}</p>
-        </div>
-      </Link>
-    </div>
+    <SocialContainer>
+      {button ? (
+        <SocialContent {...props} />
+      ) : (
+        <Link to={route}>
+          <SocialContent {...props} />
+        </Link>
+      )}
+    </SocialContainer>
   );
 };
 

@@ -7,22 +7,31 @@ import SocialSlider from '../../../utils/socials/SocialSlider';
 
 const socials: SocialProps[] = [
   {
-    route: '/products/followers',
+    route: '#',
     title: '+5,000 Followers',
     desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
     src: followers5k,
+    button: {
+      url: '#',
+    },
   },
   {
-    route: '/products/followers',
+    route: '#',
     title: '+10,000 Followers',
     desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
     src: followers10k,
+    button: {
+      url: '#',
+    },
   },
   {
-    route: '/products/followers',
+    route: '#',
     title: '+25,000 Followers',
     desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
     src: followers25k,
+    button: {
+      url: '#',
+    },
   },
 ];
 
