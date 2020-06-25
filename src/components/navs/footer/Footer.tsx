@@ -81,6 +81,17 @@ const Footer: React.FC = () => {
         <div className="w-full flex flex-col sm:mb-0 mb-5 sm:w-auto sm:block items-center justify-center">
           <img width={200} src={logo} alt="Logo" />
           <FooterSocials />
+          <p className="mt-4">
+            Developed by{' '}
+            <a
+              className="underline"
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://alonlivne.dev"
+            >
+              Alon Livne
+            </a>
+          </p>
         </div>
         {footerNavLists.map(footerNavList => (
           <FooterNavList key={footerNavList.title} {...footerNavList} />
