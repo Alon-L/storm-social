@@ -18,9 +18,12 @@ const msToTime = (s: number): string => {
   const secs = s % 60;
   s = (s - secs) / 60;
   const mins = s % 60;
-  const hrs = (s - mins) / 60;
+  s = (s - mins) / 60;
+  const hrs = s % 24;
+  s = (s - hrs) / 24;
+  const days = s;
 
-  return `${padTime(hrs)}:${padTime(mins)}:${padTime(secs)}`;
+  return `${padTime(days)}:${padTime(hrs)}:${padTime(mins)}:${padTime(secs)}`;
 };
 
 class GiveawayTimer extends Component<GiveawayTimerProps, GiveawayTimerState> {

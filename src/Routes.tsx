@@ -46,13 +46,13 @@ Giveaway Date
 
 Prize! $5000 CASH`,
     src: giveawayImage,
-    remaining: 10000,
+    endsAt: new Date('July 27, 2020 00:20:00 GMT+00:00'),
   },
   previous: {
     desc: `
 Previous giveaway!`,
     src: giveawayImage,
-    remaining: 100000000,
+    endsAt: new Date(Date.now() + 10000),
   },
 };
 

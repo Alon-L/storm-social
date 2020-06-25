@@ -12,15 +12,19 @@ export interface Giveaways {
 export interface GiveawayProps {
   src: string;
   desc: string;
-  remaining: number;
+  endsAt: Date;
 }
 
 const Giveaway: React.FC<GiveawayProps> = (props: GiveawayProps) => {
-  const { src, desc, remaining } = props;
+  const { src, desc, endsAt } = props;
+
+  console.log(endsAt.getTime(), Date.now());
+
+  const remaining = endsAt.getTime() - Date.now();
 
   return (
-    <div style={{ backgroundColor: '#efeee9' }}>
-      <div className="container md:flex flex-no-wrap justify-center py-32">
+    <div /* style={{ backgroundColor: '#efeee9' }} */>
+      <div className="container md:flex flex-no-wrap justify-center py-32 overflow-hidden">
         <div className="giveaway--splash relative flex items-center justify-center">
           <img
             className="absolute z-0 giveaway--splash--image"
