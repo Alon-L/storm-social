@@ -1,13 +1,12 @@
 import React from 'react';
-import HomeSocialsDots from './HomeSocialsDots';
-import followers10k from '../../../../../assets/socials/followers_10k.png';
-import followers25k from '../../../../../assets/socials/followers_25k.png';
-import followers5k from '../../../../../assets/socials/followers_5k.png';
-import forbes from '../../../../../assets/socials/forbes.png';
-import tiktok from '../../../../../assets/socials/tiktok.png';
-import verification from '../../../../../assets/socials/verification.png';
-import Social, { SocialProps } from '../../../../utils/socials/Social';
-import SocialSlider from '../../../../utils/socials/SocialSlider';
+import followers10k from '../../../../assets/socials/followers_10k.png';
+import followers25k from '../../../../assets/socials/followers_25k.png';
+import followers5k from '../../../../assets/socials/followers_5k.png';
+import forbes from '../../../../assets/socials/forbes.png';
+import tiktok from '../../../../assets/socials/tiktok.png';
+import verification from '../../../../assets/socials/verification.png';
+import Social, { SocialProps } from '../../../utils/socials/Social';
+import SocialSlider from '../../../utils/socials/SocialSlider';
 
 const homeSocials: SocialProps[] = [
   {
@@ -57,12 +56,10 @@ const HomeSocials: React.FC = () => {
           <p>Do not wait for tomorrow - start a new life today</p>
         </div>
         <div className="relative flex justify-center items-center flex-wrap mb-12 lg:-mx-10">
-          <HomeSocialsDots className="top-0 right-0 translate-x-24 -translate-y-24" />
           {homeSocials.map(social => (
             <Social key={social.title} {...social} />
           ))}
           <SocialSlider />
-          <HomeSocialsDots className="bottom-0 left-0 -translate-x-24 translate-y-24" />
         </div>
       </div>
     </section>
