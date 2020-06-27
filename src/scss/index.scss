@@ -190,23 +190,56 @@ button.btn, a.btn {
 }
 
 .giveaway {
+  background-color: #efeee9;
+
   &--splash {
-    @media (min-width: 768px) {
+    @media (min-width: 1025px) {
       width: 800px;
     }
 
-    &--image {
-      @media (max-width: 767px) {
+    @media (max-width: 1024px) {
+      width: 600px;
+      bottom: 10%;
+    }
+
+    @media (max-width: 640px) {
+      width: 550px;
+    }
+  }
+
+  &--influencer {
+    @media (max-width: 1024px) {
+      @apply w-full;
+      @apply overflow-hidden;
+      @apply inline-block;
+
+      &--image {
+        @apply w-auto;
+        height: 1100px;
+        min-width: 100%;
         max-width: initial;
-        left: 50%;
+        margin-left: 50%;
         transform: translateX(-50%);
       }
+    }
+
+    @media (max-width: 800px) {
+      height: 1000px;
     }
   }
 
   &--content {
-    text-shadow: 0 0 6px rgba(255, 255, 255, 1);
-    line-height: 1.15;
+    text-shadow: 0 0 8px rgba(0, 0, 0, .65);
+
+    &--image {
+      @media (max-width: 1024px) {
+        width: 50px;
+      }
+    }
+
+    &--desc {
+      line-height: 1.15;
+    }
   }
 }
 
