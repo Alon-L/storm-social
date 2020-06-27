@@ -23,7 +23,7 @@ const products: (ProductProps & { path: string })[] = [
     path: '/products/verification',
     title: 'Verification',
     desc:
-      'Why you need this? Instagram Verification is best way to establish your Brand or Influencer profile. Instagram prioritise verified accounts pushing you or your brand to the top of the search & comment sections, driving more traffic to your desired account!',
+      'Instagram Verification is best way to establish your Brand or Influencer profile. Instagram prioritise verified accounts pushing you or your brand to the top of the search & comment sections, driving more traffic to your desired account!',
     readyToOrder:
       'By purchasing this service Storm Social Will provide you with an Instagram Verification Tick to your desired account. Please note when purchasing this service you must require a min. Of 5 featured articles. Don’t have any articles? <a class="underline" href="#">Click here</a>',
     price: 5999.99,
