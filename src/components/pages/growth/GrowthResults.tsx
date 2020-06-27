@@ -41,8 +41,8 @@ const GrowthResults: React.FC = () => {
       <div className="mb-16 lg:w-2/5 mx-auto">
         <h1 className="text-3xl font-semibold mb-3">Growth Results</h1>
         <p>
-          Take a look at so me of our amazing organic growth results for
-          previous clients.
+          Take a look at some of our amazing organic growth results for previous
+          clients.
         </p>
       </div>
       <div className="flex flex-wrap justify-center">
