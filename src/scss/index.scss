@@ -10,7 +10,12 @@ button:focus {
   @apply outline-none;
 }
 
-$navbar-height: 136px;
+$navbar-height: 136px !global;
+
+@media (max-width: 1024px) {
+  // Navbar on mobile is shorter
+  $navbar-height: 109px !global;
+}
 
 .full-height {
   height: calc(100vh - #{$navbar-height});
