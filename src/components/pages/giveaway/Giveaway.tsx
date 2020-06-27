@@ -23,16 +23,16 @@ const Giveaway: React.FC<GiveawayProps> = (props: GiveawayProps) => {
   const remaining = endsAt.getTime() - Date.now();
 
   return (
-    <div /* style={{ backgroundColor: '#efeee9' }} */>
-      <div className="container md:flex flex-no-wrap justify-center py-32 overflow-hidden">
-        <div className="giveaway--splash relative flex items-center justify-center">
+    <div className="giveaway overflow-hidden relative">
+      <div className="relative flex flex-no-wrap justify-center overflow-hidden lg:container lg:py-32">
+        <div className="giveaway--splash absolute z-10 lg:relative lg:z-auto">
           <img
             className="absolute z-0 giveaway--splash--image"
             width={800}
             src={splash}
             alt="Splash"
           />
-          <div className="flex text-center justify-center items-center relative md:py-0 py-16 z-10">
+          <div className="flex text-center text-white mx-auto justify-center items-center relative z-10 block pt-4 sm:pt-16">
             <GiveawayContent
               src={src}
               desc={desc}
@@ -40,11 +40,16 @@ const Giveaway: React.FC<GiveawayProps> = (props: GiveawayProps) => {
             />
           </div>
         </div>
-        <div className="-ml-24 -my-12 z-10 md:block hidden">
+        <div className="-ml-24 -my-12 z-10 lg:block hidden">
           <img width={350} src={phones} alt="Phones" />
         </div>
-        <div className="-ml-16 z-0 lg:block hidden">
-          <img width={550} src={influencer} alt="Influencer" />
+        <div className="giveaway--influencer lg:-ml-16 z-0">
+          <img
+            className="giveaway--influencer--image lg:border-4 lg:border-black lg:rounded-lg"
+            width={550}
+            src={influencer}
+            alt="Influencer"
+          />
         </div>
       </div>
     </div>
