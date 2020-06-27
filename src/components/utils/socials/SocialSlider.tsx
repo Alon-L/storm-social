@@ -6,7 +6,7 @@ import 'rc-slider/assets/index.css';
 const initialFollowers = 10000;
 
 // The number of dollars paid per follow
-const costPerFollow = 0.035;
+const costPerFollow = 0.04;
 
 const SocialSlider: React.FC = () => {
   const [followers, setFollowers] = useState(initialFollowers);
@@ -31,7 +31,7 @@ const SocialSlider: React.FC = () => {
             <Slider
               defaultValue={initialFollowers}
               min={1000}
-              max={25000}
+              max={250000}
               step={1000}
               railStyle={{ backgroundColor: '#c2cae1' }}
               trackStyle={{ backgroundColor: '#38c3fa' }}
