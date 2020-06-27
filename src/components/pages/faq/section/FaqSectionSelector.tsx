@@ -24,7 +24,7 @@ const FaqSectionSelector: React.FC<FaqSectionSelectorProps> = (
     <button
       onClick={() => dispatch(setSelected(title))}
       type="button"
-      className="lg:w-1/5 md:w-1/2 rounded-lg shadow-md"
+      className="w-full rounded-lg shadow-md md:w-1/2 lg:w-1/5"
     >
       <div
         className={`faq--section--box rounded-lg transition-all duration-200 ease-in-out p-5 ${
