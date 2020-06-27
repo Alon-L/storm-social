@@ -47,7 +47,7 @@ const GrowthResults: React.FC = () => {
       </div>
       <div className="flex flex-wrap justify-center">
         {results.map(({ name, src }) => (
-          <div className="w-1/3 mb-16">
+          <div className="w-full mb-16 px-2 sm:px-4 md:w-1/2 lg:w-1/3">
             <img
               width={350}
               className="mx-auto"
