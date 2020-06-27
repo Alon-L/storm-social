@@ -6,7 +6,7 @@ import 'rc-slider/assets/index.css';
 const initialFollowers = 10000;
 
 // The number of dollars paid per follow
-const dollarsPerFollower = 0.005;
+const costPerFollow = 0.035;
 
 const SocialSlider: React.FC = () => {
   const [followers, setFollowers] = useState(initialFollowers);
@@ -26,7 +26,7 @@ const SocialSlider: React.FC = () => {
               +{followers.toLocaleString()} Followers
             </h4>
             <p className="opacity-70 text-sm mb-2">
-              {(followers * dollarsPerFollower).toLocaleString()} USD
+              {(followers * costPerFollow).toLocaleString()} USD
             </p>
             <Slider
               defaultValue={initialFollowers}
