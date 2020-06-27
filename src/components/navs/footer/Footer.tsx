@@ -63,12 +63,12 @@ const footerNavLists: FooterNavListProps[] = [
     title: 'Other',
     fields: [
       {
-        name: 'Memberships',
-        route: '/memberships',
-      },
-      {
         name: 'Growth Results',
         route: '/growth/results',
+      },
+      {
+        name: 'Memberships',
+        route: '/memberships',
       },
     ],
   },
