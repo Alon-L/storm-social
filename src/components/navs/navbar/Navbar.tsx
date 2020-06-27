@@ -45,12 +45,9 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
       alt: 'Logo',
     },
     {
-      type: NavbarItemType.Dropdown,
-      name: 'Growth',
-      routes: [
-        { name: 'Organic Growth', route: '/growth/organic' },
-        { name: 'Growth Results', route: '/growth/results' },
-      ],
+      type: NavbarItemType.Route,
+      name: 'Results',
+      route: '/growth/results',
     },
     {
       type: NavbarItemType.Dropdown,
