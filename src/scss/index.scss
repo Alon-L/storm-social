@@ -33,6 +33,10 @@ $navbar-height: 136px;
   &--bg {
     background: url('../assets/home/background.jpg') no-repeat center center;
     background-size: cover;
+
+    @supports (-webkit-overflow-scrolling: touch) {
+      background-attachment: scroll !important;
+    }
   }
 
   &--title {
