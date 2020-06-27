@@ -12,37 +12,42 @@ const homeSocials: SocialProps[] = [
   {
     route: '/products/verification',
     title: 'Verification',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+    desc:
+      'Instagram Verification is the best way to establish your Brand or Influencer profile.',
     src: verification,
   },
   {
     route: '/products/artices',
     title: 'Articles',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+    desc: 'This boosts your online recognition & social media presence.',
     src: forbes,
   },
   {
     route: '/products/tiktok',
     title: 'TikTok',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+    desc:
+      'Having access to to the TikTok Algorithm is the best way to increase your chances to be featured on the #foryoupage helping our clients to go viral!',
     src: tiktok,
   },
   {
     route: '/products/instagram',
     title: '+5,000 Followers',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+    desc:
+      'Receive 5,000 Instagram followers to your desired Instagram account.',
     src: followers5k,
   },
   {
     route: '/products/instagram',
     title: '+10,000 Followers',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+    desc:
+      'Receive 10,000 Instagram followers to your desired Instagram account.',
     src: followers10k,
   },
   {
     route: '/products/instagram',
     title: '+25,000 Followers',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+    desc:
+      'Receive 25,000 Instagram followers to your desired Instagram account.',
     src: followers25k,
   },
 ];
@@ -55,7 +60,7 @@ const HomeSocials: React.FC = () => {
           <h2 className="text-4xl font-semibold">Grow Your Social</h2>
           <p>Do not wait for tomorrow - start a new life today</p>
         </div>
-        <div className="relative flex justify-center items-center flex-wrap mb-12 lg:-mx-10">
+        <div className="relative flex justify-center items-stretch flex-wrap mb-12 lg:-mx-10">
           {homeSocials.map(social => (
             <Social key={social.title} {...social} />
           ))}
