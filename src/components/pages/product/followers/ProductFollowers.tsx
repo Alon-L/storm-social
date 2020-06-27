@@ -9,29 +9,35 @@ const socials: SocialProps[] = [
   {
     route: '#',
     title: '+5,000 Followers',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+    desc:
+      'Within the month you will receive 5,000 organic Instagram followers to your desired Instagram account.',
     src: followers5k,
     button: {
       url: '#',
     },
+    price: 299.99,
   },
   {
     route: '#',
     title: '+10,000 Followers',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+    desc:
+      'Within the month you will receive 10,000 organic Instagram followers to your desired Instagram account.\n',
     src: followers10k,
     button: {
       url: '#',
     },
+    price: 499.99,
   },
   {
     route: '#',
     title: '+25,000 Followers',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+    desc:
+      'Within the month you will receive 25,000 organic Instagram followers to your desired Instagram account.\n',
     src: followers25k,
     button: {
       url: '#',
     },
+    price: 999.99,
   },
 ];
 
