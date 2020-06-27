@@ -151,7 +151,7 @@ const Routes: React.FC = () => {
       <FullRoute path="/products/articles">
         <ProductArticles />
       </FullRoute>
-      <FullRoute path="/products/followers">
+      <FullRoute path="/products/instagram">
         <ProductFollowers />
       </FullRoute>
 

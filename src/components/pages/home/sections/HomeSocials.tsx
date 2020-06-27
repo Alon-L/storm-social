@@ -28,19 +28,19 @@ const homeSocials: SocialProps[] = [
     src: tiktok,
   },
   {
-    route: '/products/followers',
+    route: '/products/instagram',
     title: '+5,000 Followers',
     desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
     src: followers5k,
   },
   {
-    route: '/products/followers',
+    route: '/products/instagram',
     title: '+10,000 Followers',
     desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
     src: followers10k,
   },
   {
-    route: '/products/followers',
+    route: '/products/instagram',
     title: '+25,000 Followers',
     desc: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
     src: followers25k,
