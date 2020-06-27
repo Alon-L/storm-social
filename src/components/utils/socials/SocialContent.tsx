@@ -7,12 +7,13 @@ export interface SocialContentProps {
   button?: {
     url: string;
   };
+  price?: number;
 }
 
 const SocialContent: React.FC<SocialContentProps> = (
   props: SocialContentProps,
 ) => {
-  const { title, desc, src, button } = props;
+  const { title, desc, src, button, price } = props;
 
   return (
     <div
@@ -23,11 +24,16 @@ const SocialContent: React.FC<SocialContentProps> = (
     >
       <img className="rounded" width={140} src={src} alt="title" />
       <h3 className="mt-3 text-xl font-semibold">{title}</h3>
-      <p className="mt-3">{desc}</p>
-      {button && (
-        <a href={button.url} className="btn mt-8 px-12">
-          Buy Now!
-        </a>
+      <p className="mt-3 whitespace-pre-line">{desc}</p>
+      {button && price && (
+        <>
+          <a href={button.url} className="btn mt-6 px-12">
+            Buy Now!
+          </a>
+          <span className="text-sm block mt-2 opacity-75">
+            {price.toLocaleString()} USD
+          </span>
+        </>
       )}
     </div>
   );
