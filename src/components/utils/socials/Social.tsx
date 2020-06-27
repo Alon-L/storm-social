@@ -15,7 +15,7 @@ const Social: React.FC<SocialProps> = (props: SocialProps) => {
       {button ? (
         <SocialContent {...props} />
       ) : (
-        <Link to={route}>
+        <Link className="flex" to={route}>
           <SocialContent {...props} />
         </Link>
       )}

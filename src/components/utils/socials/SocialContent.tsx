@@ -17,7 +17,7 @@ const SocialContent: React.FC<SocialContentProps> = (
 
   return (
     <div
-      className={`bg-white shadow-soft-xl rounded-lg p-5 flex justify-center flex-col items-center ${
+      className={`bg-white shadow-soft-xl rounded-lg p-5 flex  flex-col items-center ${
         !button &&
         'transition-transform duration-200 ease-in-out transform hover:-translate-y-4'
       }`}
