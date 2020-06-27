@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeMain from './sections/HomeMain';
-import HomeSocials from './sections/socials/HomeSocials';
+import HomeSocials from './sections/HomeSocials';
 
 const Home: React.FC = () => {
   return (
