@@ -15,7 +15,7 @@ const FooterNavList: React.FC<FooterNavListProps> = (
   const { title, fields } = props;
 
   return (
-    <div className="m-3 text-center w-full lg:w-1/12 md:w-2/12 sm:w-4/12 sm:text-left">
+    <div className="m-3 w-full lg:w-1/12 md:w-2/12 sm:w-4/12">
       <h5 className="font-semibold mb-2">{title}</h5>
       <ul>
         {fields.map(({ name, route }) => (

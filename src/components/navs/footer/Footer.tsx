@@ -76,7 +76,7 @@ const footerNavLists: FooterNavListProps[] = [
 
 const Footer: React.FC = () => {
   return (
-    <div className="mt-12 py-16 px-24">
+    <div className="mt-12 py-16 px-24 text-center sm:text-left">
       <div className="flex justify-between flex-wrap mb-6">
         <div className="w-full flex flex-col sm:mb-0 mb-5 sm:w-auto sm:block items-center justify-center">
           <img width={200} src={logo} alt="Logo" />
