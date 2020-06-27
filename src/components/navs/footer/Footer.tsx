@@ -42,8 +42,8 @@ const footerNavLists: FooterNavListProps[] = [
     title: 'Packages',
     fields: [
       {
-        name: 'Instagram Followers',
-        route: '/products/followers',
+        name: 'Instagram Growth',
+        route: '/products/instagram',
       },
       {
         name: 'Verification',

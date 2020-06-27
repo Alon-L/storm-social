@@ -14,6 +14,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
   const { theme = NavbarTheme.Dark } = props;
+  const themedLogo = theme === NavbarTheme.Light ? logoWhite : logo;
 
   const [active, setActive] = useState(false);
 
@@ -41,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
     },
     {
       type: NavbarItemType.Image,
-      src: theme === NavbarTheme.Light ? logoWhite : logo,
+      src: themedLogo,
       alt: 'Logo',
     },
     {
@@ -53,7 +54,7 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
       type: NavbarItemType.Dropdown,
       name: 'Products',
       routes: [
-        { name: 'Instagram Followers', route: '/products/followers' },
+        { name: 'Instagram Growth', route: '/products/instagram' },
         { name: 'Verification', route: '/products/verification' },
         { name: 'Articles', route: '/products/articles' },
         { name: 'TikTok', route: '/products/tiktok' },
@@ -69,9 +70,9 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
   return (
     <div className={`container ${theme === NavbarTheme.Light && 'text-white'}`}>
       <nav className="flex flex-row-reverse justify-between flex-no-wrap py-6 lg:flex-row lg:justify-around lg:py-0">
-        <div className="inline-block lg:hidden">
+        <div className="lg:hidden">
           <button
-            className={`hamburger hamburger--collapse -mt-2 ${
+            className={`hamburger hamburger--collapse ${
               active && 'is-active'
             } ${theme === NavbarTheme.Light && 'hamburger-white'}`}
             type="button"
@@ -82,17 +83,25 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
             </span>
           </button>
         </div>
-        <div
-          className={`-mt-6 transition-all duration-200 ease-in-out lg:mt-0 lg:flex lg:justify-center lg:w-full ${
-            !active && 'hidden'
-          }`}
-        >
-          {navbarItems.map(item => (
-            <NavbarItem
-              key={item.type !== NavbarItemType.Image ? item.name : item.alt}
-              {...item}
-            />
-          ))}
+        <div>
+          <img
+            src={themedLogo}
+            alt="Logo"
+            width={150}
+            className="block lg:hidden"
+          />
+          <div
+            className={`transition-all duration-200 ease-in-out lg:mt-0 lg:flex lg:justify-center lg:w-full ${
+              !active && 'hidden'
+            }`}
+          >
+            {navbarItems.map(item => (
+              <NavbarItem
+                key={item.type !== NavbarItemType.Image ? item.name : item.alt}
+                {...item}
+              />
+            ))}
+          </div>
         </div>
       </nav>
     </div>
