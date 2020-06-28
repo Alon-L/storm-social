@@ -32,7 +32,7 @@ const Giveaway: React.FC<GiveawayProps> = (props: GiveawayProps) => {
             src={splash}
             alt="Splash"
           />
-          <div className="flex text-center text-white mx-auto justify-center items-center relative z-10 block pt-4 sm:pt-16">
+          <div className="giveaway--splash--content flex text-center text-white mx-auto justify-center items-center relative z-10 block pt-4 sm:pt-16">
             <GiveawayContent
               src={src}
               desc={desc}

@@ -190,6 +190,10 @@ button.btn, a.btn {
     @media (max-width: 640px) {
       width: 550px;
     }
+
+    &--content {
+      min-height: 600px;
+    }
   }
 
   &--influencer {
