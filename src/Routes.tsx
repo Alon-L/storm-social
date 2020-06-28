@@ -16,6 +16,7 @@ import Memberships from './components/pages/memberships/Memberships';
 import Product, { ProductProps } from './components/pages/product/Product';
 import ProductArticles from './components/pages/product/ProductArticles';
 import ProductFollowers from './components/pages/product/followers/ProductFollowers';
+import Tos from './components/pages/tos';
 import WipNotification from './components/utils/WIPNotification';
 
 const products: (ProductProps & { path: string })[] = [
@@ -153,6 +154,10 @@ const Routes: React.FC = () => {
       </FullRoute>
       <FullRoute path="/products/instagram">
         <ProductFollowers />
+      </FullRoute>
+
+      <FullRoute path="/tos">
+        <Tos />
       </FullRoute>
 
       <FullRoute path="*">
