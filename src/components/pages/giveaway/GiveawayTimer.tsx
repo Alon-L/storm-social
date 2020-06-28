@@ -28,7 +28,7 @@ const msToTime = (s: number): string => {
 
 class GiveawayTimer extends Component<GiveawayTimerProps, GiveawayTimerState> {
   state = {
-    remaining: this.props.initialRemaining,
+    remaining: this.initialRemaining,
   };
 
   private interval!: NodeJS.Timeout;
@@ -40,10 +40,19 @@ class GiveawayTimer extends Component<GiveawayTimerProps, GiveawayTimerState> {
   public componentDidUpdate(prevProps: Readonly<GiveawayTimerProps>): void {
     if (this.props !== prevProps) {
       clearInterval(this.interval);
+
       // eslint-disable-next-line react/no-did-update-set-state
-      this.setState({ remaining: this.props.initialRemaining });
+      this.setState({
+        remaining: this.initialRemaining,
+      });
       this.startInterval();
     }
+  }
+
+  public get initialRemaining(): number {
+    const { initialRemaining } = this.props;
+
+    return initialRemaining < 0 ? 0 : initialRemaining;
   }
 
   private startInterval = () => {
