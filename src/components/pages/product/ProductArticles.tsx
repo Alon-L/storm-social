@@ -29,7 +29,11 @@ const ProductArticles: React.FC = () => {
   return (
     <div className="container flex justify-between text-center lg:flex-row flex-col">
       {articles.map(article => (
-        <div key={article.title} className="w-full mb-16 lg:w-2/5 lg:mb-0">
+        <div
+          key={article.title}
+          className="
+        w-full mb-24 lg:w-2/5 lg:mb-0"
+        >
           <ProductContent {...article} />
         </div>
       ))}
