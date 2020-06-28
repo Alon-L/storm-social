@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
   return (
     <div className="mt-12 py-16 px-24 text-center sm:text-left">
       <div className="flex justify-between flex-wrap mb-6">
-        <div className="w-full flex flex-col sm:mb-0 mb-5 sm:w-auto sm:block items-center justify-center">
+        <div className="w-full flex flex-col items-center justify-center mr-3 mb-5 sm:w-auto sm:mb-0 sm:block">
           <img width={200} src={logo} alt="Logo" />
           <FooterSocials />
           <p className="mt-4">
