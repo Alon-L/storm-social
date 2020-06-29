@@ -9,15 +9,15 @@ import ContactFormSocial, { ContactFormSocialProps } from './ContactFormSocial';
 const contactFormSocials: ContactFormSocialProps[] = [
   {
     icon: faFacebook,
-    url: 'https://facebook.com',
+    url: 'https://www.facebook.com/Storm-Social',
   },
   {
     icon: faTwitter,
-    url: 'https://twitter.com',
+    url: 'https://twitter.com/stormsocials',
   },
   {
     icon: faInstagram,
-    url: 'https://instagram.com',
+    url: 'https://www.instagram.com/stormsocial',
   },
 ];
 
@@ -33,7 +33,7 @@ const ContactForm: React.FC = () => {
         type="text"
         value={name}
         name="name"
-        placeholder="Apple Seed"
+        placeholder="Name"
         onChange={(e: ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
       />
       <input
@@ -41,7 +41,7 @@ const ContactForm: React.FC = () => {
         value={email}
         type="email"
         name="email"
-        placeholder="seed@apple.com"
+        placeholder="Email"
         onChange={(e: ChangeEvent<HTMLInputElement>) =>
           setEmail(e.target.value)
         }

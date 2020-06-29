@@ -1,3 +1,4 @@
+import giveawayImage from './assets/giveaway/influencer.png';
 import featuredArticles from './assets/products/featuredArticles.jpg';
 import forbes from './assets/products/forbes.png';
 import tiktok from './assets/products/tiktok.jpeg';
@@ -16,6 +17,7 @@ export enum ProductQuery {
   Forbes = 'Forbes Article',
   Verification = 'Instagram Verification',
   TikTok = 'TikTok algorithm',
+  CurrentGiveaway = 'Giveaway Growth Slot',
 }
 
 export enum ProductNames {
@@ -27,6 +29,7 @@ export enum ProductNames {
   Followers10K = 'followers10k',
   Followers25K = 'followers25k',
   FollowersSlider = 'followers',
+  CurrentGiveaway = 'currentGiveaway',
 }
 
 export const ProductImages = {
@@ -38,6 +41,7 @@ export const ProductImages = {
   [ProductNames.Followers10K]: followers10k,
   [ProductNames.Followers25K]: followers25k,
   [ProductNames.FollowersSlider]: followers,
+  [ProductNames.CurrentGiveaway]: giveawayImage,
 };
 
 export interface ProductStruct {
@@ -78,6 +82,16 @@ Please not the TikTok Algorithm changes frequently. To take full advantage of th
     image: ProductNames.TikTok,
     pageImage: tiktok,
     query: ProductQuery.TikTok,
+  },
+  {
+    path: '/products/growth-slot',
+    title: 'Giveaway Growth Slot',
+    desc: 'lorem ipsum',
+    readyToOrder: 'lorem ipsum',
+    price: 499.99,
+    image: ProductNames.CurrentGiveaway,
+    pageImage: giveawayImage,
+    query: ProductQuery.CurrentGiveaway,
   },
 ];
 

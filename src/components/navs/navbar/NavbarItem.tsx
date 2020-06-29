@@ -27,6 +27,7 @@ export interface NavbarItemImage {
   type: NavbarItemType.Image;
   src: string;
   alt: string;
+  route: string;
 }
 
 export type NavbarItemProps =
@@ -58,7 +59,6 @@ const NavbarItem: React.FC<NavbarItemProps> = (props: NavbarItemProps) => {
         </NavbarItemWrapper>
       );
     case NavbarItemType.Dropdown:
-      // TODO: Implement dropdown
       return (
         <NavbarItemWrapper>
           <NavbarDropdown name={props.name}>
@@ -79,7 +79,9 @@ const NavbarItem: React.FC<NavbarItemProps> = (props: NavbarItemProps) => {
     default:
       return (
         <div className="lg:m-6 lg:block hidden">
-          <img width={250} src={props.src} alt={props.alt} />
+          <Link to={props.route}>
+            <img width={250} src={props.src} alt={props.alt} />
+          </Link>
         </div>
       );
   }

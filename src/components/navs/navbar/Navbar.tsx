@@ -44,6 +44,7 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
       type: NavbarItemType.Image,
       src: themedLogo,
       alt: 'Logo',
+      route: '/',
     },
     {
       type: NavbarItemType.Route,
@@ -58,6 +59,7 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
         { name: 'Verification', route: '/products/verification' },
         { name: 'Articles', route: '/products/articles' },
         { name: 'TikTok', route: '/products/tiktok' },
+        { name: 'Growth Slot', route: '/products/growth-slot' },
       ],
     },
     {

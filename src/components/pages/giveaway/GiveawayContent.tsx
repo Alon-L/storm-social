@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import GiveawayTimer from './GiveawayTimer';
 
 export interface GiveawayContentProps {
@@ -12,6 +13,13 @@ const GiveawayContent: React.FC<GiveawayContentProps> = (
 ) => {
   const { src, desc, initialRemaining } = props;
 
+  const [soldOut, setSoldOut] = useState(false);
+
+  useEffect(() => {
+    setSoldOut(initialRemaining <= 0);
+    console.log('Here');
+  }, [initialRemaining]);
+
   return (
     <div className="giveaway--content flex flex-col items-center justify-center">
       <img
@@ -24,14 +32,25 @@ const GiveawayContent: React.FC<GiveawayContentProps> = (
         {desc}
       </p>
       <div className="mt-5">
-        <GiveawayTimer initialRemaining={initialRemaining} />
+        <GiveawayTimer
+          setSoldOut={setSoldOut}
+          initialRemaining={initialRemaining}
+        />
         <p className="text-lg">Remaining!</p>
-        <button
-          className="btn mt-2 bg-primary-700 border-primary-700 hover:bg-primary-900 hover:border-primary-900 shadow-lg"
-          type="button"
-        >
-          Enter Now!
-        </button>
+        <div className="mt-3">
+          {soldOut ? (
+            <p className="text-3xl font-semibold mb-8">Sold Out!</p>
+          ) : (
+            <div className="p-2">
+              <Link
+                className="btn bg-primary-700 border-primary-700 hover:bg-primary-900 hover:border-primary-900 shadow-lg"
+                to="/products/growth-slot"
+              >
+                Enter Now!
+              </Link>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

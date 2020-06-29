@@ -65,5 +65,9 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [require('tailwind-percentage-heights-plugin')(), require('tailwindcss-text-fill-stroke')()]
+  plugins: [
+    require('tailwind-percentage-heights-plugin')(),
+    require('tailwindcss-text-fill-stroke')(),
+    require('@tailwindcss/custom-forms'),
+  ]
 };

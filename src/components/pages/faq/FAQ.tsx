@@ -69,7 +69,7 @@ const Faq: React.FC = () => {
         <h1 className="text-3xl font-semibold mb-8">FAQ&apos;s</h1>
         <p className="opacity-75">Hello, how can we help?</p>
       </div>
-      <div className="flex justify-around flex-wrap mb-16">
+      <div className="flex items-stretch justify-around flex-wrap mb-16">
         {faqSections.map(faqSection => (
           <FaqSectionSelector key={faqSection.title} {...faqSection} />
         ))}

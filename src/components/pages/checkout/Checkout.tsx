@@ -41,11 +41,13 @@ const Checkout: React.FC = () => {
       {query ? (
         <div className="flex flex-wrap">
           <div className="w-full mb-16 lg:w-1/2 lg:mb-0">
-            <h3 className="text-2xl font-semibold mb-8">Order Summary</h3>
+            <h3 className="text-2xl font-semibold mb-8 text-center lg:text-left">
+              Order Summary
+            </h3>
             <CheckoutSummary title={title} image={image} price={price} />
           </div>
           <div className="w-full lg:w-1/2">
-            <div className="mb-8">
+            <div className="mb-8 text-center lg:text-left">
               <h3 className="text-2xl font-semibold">You are nearly done!</h3>
               <p>Fill in the required information to proceed</p>
             </div>

@@ -9,19 +9,19 @@ import FooterSocial, { FooterSocialProps } from './FooterSocial';
 
 const footerSocials: FooterSocialProps[] = [
   {
-    url: 'https://instagram.com',
+    url: 'https://www.instagram.com/stormsocial',
     icon: faInstagram,
   },
   {
-    url: 'https://twitter.com',
+    url: 'https://twitter.com/stormsocials',
     icon: faTwitter,
   },
   {
-    url: 'https://facebook.com',
+    url: 'https://www.facebook.com/Storm-Social',
     icon: faFacebook,
   },
   {
-    url: 'mailto:apple@seed.com',
+    url: 'mailto:contact@stormsocial.co',
     icon: faEnvelope,
   },
 ];

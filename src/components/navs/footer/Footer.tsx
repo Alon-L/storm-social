@@ -57,6 +57,10 @@ const footerNavLists: FooterNavListProps[] = [
         name: 'TikTok',
         route: '/products/tiktok',
       },
+      {
+        name: 'Growth Slot',
+        route: '/products/growth-slot',
+      },
     ],
   },
   {

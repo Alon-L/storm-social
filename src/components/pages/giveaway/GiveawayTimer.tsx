@@ -2,6 +2,7 @@ import React, { Component, ReactNode } from 'react';
 
 export interface GiveawayTimerProps {
   initialRemaining: number;
+  setSoldOut: (soldout: boolean) => void;
 }
 
 interface GiveawayTimerState {
@@ -27,7 +28,7 @@ const msToTime = (s: number): string => {
 };
 
 class GiveawayTimer extends Component<GiveawayTimerProps, GiveawayTimerState> {
-  state = {
+  public state = {
     remaining: this.initialRemaining,
   };
 
@@ -45,6 +46,11 @@ class GiveawayTimer extends Component<GiveawayTimerProps, GiveawayTimerState> {
       this.setState({
         remaining: this.initialRemaining,
       });
+
+      if (this.initialRemaining <= 0) {
+        return;
+      }
+
       this.startInterval();
     }
   }
@@ -61,6 +67,8 @@ class GiveawayTimer extends Component<GiveawayTimerProps, GiveawayTimerState> {
 
       if (remaining <= 0) {
         clearInterval(this.interval);
+        this.props.setSoldOut(true);
+        this.setState({ remaining: 0 });
         return;
       }
 

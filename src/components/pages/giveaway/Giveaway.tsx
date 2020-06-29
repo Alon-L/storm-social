@@ -1,5 +1,5 @@
 import React from 'react';
-import GiveawayContent from './GiveawayContent';
+import GiveawayContent, { GiveawayContentProps } from './GiveawayContent';
 import influencer from '../../../assets/giveaway/influencer.png';
 import phones from '../../../assets/giveaway/phones.png';
 import splash from '../../../assets/giveaway/splash.png';
@@ -9,16 +9,13 @@ export interface Giveaways {
   previous: GiveawayProps;
 }
 
-export interface GiveawayProps {
-  src: string;
-  desc: string;
+export interface GiveawayProps
+  extends Omit<GiveawayContentProps, 'initialRemaining'> {
   endsAt: Date;
 }
 
 const Giveaway: React.FC<GiveawayProps> = (props: GiveawayProps) => {
-  const { src, desc, endsAt } = props;
-
-  console.log(endsAt.getTime(), Date.now());
+  const { endsAt } = props;
 
   const remaining = endsAt.getTime() - Date.now();
 
@@ -33,11 +30,7 @@ const Giveaway: React.FC<GiveawayProps> = (props: GiveawayProps) => {
             alt="Splash"
           />
           <div className="giveaway--splash--content flex text-center text-white mx-auto justify-center items-center relative z-10 block pt-4 sm:pt-16">
-            <GiveawayContent
-              src={src}
-              desc={desc}
-              initialRemaining={remaining}
-            />
+            <GiveawayContent {...props} initialRemaining={remaining} />
           </div>
         </div>
         <div className="-ml-24 -my-12 z-10 lg:block hidden">

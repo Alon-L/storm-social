@@ -1,4 +1,5 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export interface CheckoutFormProps {
   onSubmit: (fields: CheckoutFormFields) => void;
@@ -27,9 +28,6 @@ const CheckoutForm: React.FC<CheckoutFormProps> = (
         onSubmit({ name, instagram, email });
       }}
     >
-      <button className="form--submit mb-8 font-semibold" type="submit">
-        Checkout
-      </button>
       <input
         required
         type="text"
@@ -58,6 +56,24 @@ const CheckoutForm: React.FC<CheckoutFormProps> = (
           setEmail(e.target.value)
         }
       />
+      <label className="inline-flex items-center">
+        <input
+          className="form-checkbox h-5 w-5 text-brand-700 mb-0"
+          required
+          type="checkbox"
+          name="acceptedTos"
+        />
+        <span className="ml-3">
+          You must accept the{' '}
+          <Link to="/tos" className="underline">
+            Terms of Service
+          </Link>{' '}
+          to continue
+        </span>
+      </label>
+      <button className="block form--submit mt-8 font-semibold" type="submit">
+        Checkout
+      </button>
     </form>
   );
 };

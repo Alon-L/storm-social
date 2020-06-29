@@ -43,7 +43,7 @@ Prize! $5000 CASH`,
     desc: `
 Previous giveaway!`,
     src: giveawayImage,
-    endsAt: new Date(Date.now() + 10000),
+    endsAt: new Date(Date.now() + 3500),
   },
 };
 
