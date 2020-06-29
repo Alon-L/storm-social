@@ -1,14 +1,14 @@
-import { ProductProps } from './pages/product/ProductPage';
-import featuredArticles from '../assets/products/featuredArticles.jpg';
-import forbes from '../assets/products/forbes.png';
-import tiktok from '../assets/products/tiktok.jpeg';
-import verification from '../assets/products/verification.png';
-import followers from '../assets/socials/followers.png';
-import followers10k from '../assets/socials/followers_10k.png';
-import followers25k from '../assets/socials/followers_25k.png';
-import followers5k from '../assets/socials/followers_5k.png';
-import tiktokImage from '../assets/socials/tiktok.png';
-import verificationImage from '../assets/socials/verification.png';
+import featuredArticles from './assets/products/featuredArticles.jpg';
+import forbes from './assets/products/forbes.png';
+import tiktok from './assets/products/tiktok.jpeg';
+import verification from './assets/products/verification.png';
+import followers from './assets/socials/followers.png';
+import followers10k from './assets/socials/followers_10k.png';
+import followers25k from './assets/socials/followers_25k.png';
+import followers5k from './assets/socials/followers_5k.png';
+import tiktokImage from './assets/socials/tiktok.png';
+import verificationImage from './assets/socials/verification.png';
+import { ProductProps } from './components/pages/product/ProductPage';
 
 export enum ProductQuery {
   Followers = '1000 Instagram Followers',

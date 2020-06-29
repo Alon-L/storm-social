@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductContent from './ProductContent';
-import { ProductStruct } from '../../products';
+import { ProductStruct } from '../../../products';
 
 export interface ProductProps extends ProductStruct {
   desc: string;

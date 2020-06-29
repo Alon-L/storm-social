@@ -2,7 +2,7 @@ import Slider from 'rc-slider';
 import React, { useState } from 'react';
 import 'rc-slider/assets/index.css';
 import BuyButton from './BuyButton';
-import { ProductQuery, ProductNames } from '../products';
+import { ProductQuery, ProductNames } from '../../products';
 
 // The number to initially be previewed in the slider
 const initialFollowers = 10000;

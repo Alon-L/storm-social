@@ -1,7 +1,7 @@
 import querystring from 'querystring';
 import React from 'react';
 import { Link, LinkProps } from 'react-router-dom';
-import { ProductStruct } from '../products';
+import { ProductStruct } from '../../products';
 
 type BuyButtonProps = Partial<LinkProps> & ProductStruct;
 

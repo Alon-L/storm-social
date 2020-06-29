@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductContent from './ProductContent';
-import { articles } from '../../products';
+import { articles } from '../../../products';
 
 const ProductArticles: React.FC = () => {
   return (

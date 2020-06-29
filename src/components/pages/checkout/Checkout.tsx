@@ -3,9 +3,9 @@ import { useLocation } from 'react-router-dom';
 import CheckoutForm, { CheckoutFormFields } from './CheckoutForm';
 import CheckoutInvalid from './CheckoutInvalid';
 import CheckoutSummary from './CheckoutSummary';
+import { ProductImages } from '../../../products';
 import createCheckoutURL from '../../../utils/shopify/createCheckoutURL';
 import getProductId from '../../../utils/shopify/getProductId';
-import { ProductImages } from '../../products';
 
 const Checkout: React.FC = () => {
   const params = new URLSearchParams(useLocation().search);
@@ -45,9 +45,10 @@ const Checkout: React.FC = () => {
             <CheckoutSummary title={title} image={image} price={price} />
           </div>
           <div className="w-full lg:w-1/2">
-            <h3 className="text-2xl font-semibold mb-8">
-              Please fill the missing information:
-            </h3>
+            <div className="mb-8">
+              <h3 className="text-2xl font-semibold">You are nearly done!</h3>
+              <p>Fill in the required information to proceed</p>
+            </div>
             <CheckoutForm onSubmit={onSubmit} />
           </div>
         </div>

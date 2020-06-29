@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProductStruct } from '../../../products';
+import { ProductStruct } from '../../../../products';
 import BuyButton from '../../BuyButton';
 import ProductBoxContainer from '../ProductBoxContainer';
 import ProductBoxContent, {

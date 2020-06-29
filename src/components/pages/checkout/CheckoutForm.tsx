@@ -27,10 +27,13 @@ const CheckoutForm: React.FC<CheckoutFormProps> = (
         onSubmit({ name, instagram, email });
       }}
     >
+      <button className="form--submit mb-8 font-semibold" type="submit">
+        Checkout
+      </button>
       <input
         required
         type="text"
-        placeholder="Apple Seed"
+        placeholder="Name"
         name="name"
         value={name}
         onChange={(e: ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
@@ -38,7 +41,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = (
       <input
         required
         type="text"
-        placeholder="@apple_seed"
+        placeholder="Instagram Username"
         name="instagram"
         value={instagram}
         onChange={(e: ChangeEvent<HTMLInputElement>) =>
@@ -47,7 +50,7 @@ const CheckoutForm: React.FC<CheckoutFormProps> = (
       />
       <input
         required
-        placeholder="seed@apple.com"
+        placeholder="Email"
         type="email"
         name="email"
         value={email}
@@ -55,9 +58,6 @@ const CheckoutForm: React.FC<CheckoutFormProps> = (
           setEmail(e.target.value)
         }
       />
-      <button className="form--submit" type="submit">
-        Checkout
-      </button>
     </form>
   );
 };

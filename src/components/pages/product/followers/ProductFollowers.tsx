@@ -2,7 +2,7 @@ import React from 'react';
 import followers10k from '../../../../assets/socials/followers_10k.png';
 import followers25k from '../../../../assets/socials/followers_25k.png';
 import followers5k from '../../../../assets/socials/followers_5k.png';
-import { ProductNames, ProductQuery } from '../../../products';
+import { ProductNames, ProductQuery } from '../../../../products';
 import FollowersSlider from '../../../utils/FollowersSlider';
 import ProductBoxBuy, {
   ProductBoxBuyProps,

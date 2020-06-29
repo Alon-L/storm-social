@@ -16,8 +16,8 @@ import ProductArticles from './components/pages/product/ProductArticles';
 import ProductPage from './components/pages/product/ProductPage';
 import ProductFollowers from './components/pages/product/followers/ProductFollowers';
 import Tos from './components/pages/tos';
-import { products } from './components/products';
 import WipNotification from './components/utils/WIPNotification';
+import { products } from './products';
 
 const giveaways: Giveaways = {
   current: {
