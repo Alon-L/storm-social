@@ -40,11 +40,11 @@ const Checkout: React.FC = () => {
     <div className="container">
       {query ? (
         <div className="flex flex-wrap">
-          <div className="lg:w-1/2 w-full">
+          <div className="w-full mb-16 lg:w-1/2 lg:mb-0">
             <h3 className="text-2xl font-semibold mb-8">Order Summary</h3>
             <CheckoutSummary title={title} image={image} price={price} />
           </div>
-          <div className="lg:w-1/2 w-full">
+          <div className="w-full lg:w-1/2">
             <h3 className="text-2xl font-semibold mb-8">
               Please fill the missing information:
             </h3>
