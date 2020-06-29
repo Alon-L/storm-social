@@ -12,10 +12,10 @@ const CheckoutSummary: React.FC<CheckoutSummaryProps> = (
   const { title, image, price } = props;
 
   return (
-    <div>
-      <p>{title}</p>
-      <p>{image}</p>
-      <p>{price}</p>
+    <div className="">
+      <h5 className="text-xl font-medium">- {title}</h5>
+      <p className="mb-4">{price.toLocaleString()} USD</p>
+      <img width={150} src={image} alt={title} />
     </div>
   );
 };

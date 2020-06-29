@@ -1,12 +1,32 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, FormEvent, useState } from 'react';
 
-const CheckoutForm: React.FC = () => {
+export interface CheckoutFormProps {
+  onSubmit: (fields: CheckoutFormFields) => void;
+}
+
+export interface CheckoutFormFields {
+  name: string;
+  instagram: string;
+  email: string;
+  [key: string]: string;
+}
+
+const CheckoutForm: React.FC<CheckoutFormProps> = (
+  props: CheckoutFormProps,
+) => {
+  const { onSubmit } = props;
+
   const [name, setName] = useState('');
   const [instagram, setInstagram] = useState('');
   const [email, setEmail] = useState('');
 
   return (
-    <form>
+    <form
+      onSubmit={(e: FormEvent) => {
+        e.preventDefault();
+        onSubmit({ name, instagram, email });
+      }}
+    >
       <input
         required
         type="text"
@@ -27,8 +47,8 @@ const CheckoutForm: React.FC = () => {
       />
       <input
         required
-        type="text"
         placeholder="seed@apple.com"
+        type="email"
         name="email"
         value={email}
         onChange={(e: ChangeEvent<HTMLInputElement>) =>

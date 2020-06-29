@@ -38,8 +38,8 @@ const ContactForm: React.FC = () => {
       />
       <input
         required
-        type="text"
         value={email}
+        type="email"
         name="email"
         placeholder="seed@apple.com"
         onChange={(e: ChangeEvent<HTMLInputElement>) =>

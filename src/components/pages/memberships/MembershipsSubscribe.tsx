@@ -12,7 +12,7 @@ const MembershipsSubscribe: React.FC = () => {
         <input
           className="w-full mb-12"
           placeholder="seed@apple.com"
-          type="text"
+          type="email"
           name="email"
           value={email}
           onChange={(e: ChangeEvent<HTMLInputElement>) =>

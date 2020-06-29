@@ -104,6 +104,7 @@ input {
 
   &:focus {
     @apply border-primary-900;
+    outline: none !important;
   }
 
   &::placeholder {
