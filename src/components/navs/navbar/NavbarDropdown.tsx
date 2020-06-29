@@ -15,8 +15,8 @@ const NavbarDropdown: React.FC<NavbarDropdownProps> = (
   const [active, setActive] = useState(false);
 
   return (
-    <OutsideClickHandler onOutsideClick={() => setActive(false)}>
-      <div className="relative">
+    <div className="relative">
+      <OutsideClickHandler onOutsideClick={() => setActive(false)}>
         <button
           type="button"
           onClick={() => {
@@ -30,16 +30,16 @@ const NavbarDropdown: React.FC<NavbarDropdownProps> = (
             icon={active ? faChevronUp : faChevronDown}
           />
         </button>
-        <div
-          className={`shadow-md
+      </OutsideClickHandler>
+      <div
+        className={`shadow-md
          rounded-lg absolute bg-white transform translate-y-2 z-50 ${
            !active && 'hidden'
          }`}
-        >
-          {children}
-        </div>
+      >
+        {children}
       </div>
-    </OutsideClickHandler>
+    </div>
   );
 };
 
