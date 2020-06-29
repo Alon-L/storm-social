@@ -168,10 +168,7 @@ button.btn, a.btn {
     @apply opacity-90;
 
     &:before {
-      @media (min-width: 360px) {
-        @apply w-full;
-      }
-
+      @apply w-full;
       @apply bg-primary-700;
     }
   }
