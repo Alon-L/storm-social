@@ -117,6 +117,12 @@ input {
   }
 }
 
+.text-dot {
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
 button.btn, a.btn {
   @apply font-medium;
   @apply border-3 transition-all duration-200 ease-in-out;
@@ -243,12 +249,6 @@ button.btn, a.btn {
           @apply text-brand-700;
         }
       }
-    }
-
-    &--question {
-      display: list-item;
-      list-style-type: disc;
-      list-style-position: inside;
     }
   }
 }

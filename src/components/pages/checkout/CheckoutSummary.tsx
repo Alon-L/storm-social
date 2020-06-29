@@ -13,7 +13,7 @@ const CheckoutSummary: React.FC<CheckoutSummaryProps> = (
 
   return (
     <div className="">
-      <h5 className="text-xl font-medium">- {title}</h5>
+      <h5 className="text-dot text-xl font-medium">{title}</h5>
       <p className="mb-4">{price.toLocaleString()} USD</p>
       <img width={150} src={image} alt={title} />
     </div>

@@ -20,7 +20,7 @@ const FaqSectionQuestion: React.FC<FaqQuestion> = (props: FaqQuestion) => {
         onClick={() => setActive(!active)}
         className="w-full flex justify-between"
       >
-        <div className="faq--section--question">
+        <div className="text-dot">
           <p className="inline-block ml-2 font-medium">{question}</p>
         </div>
         <div>
