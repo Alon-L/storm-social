@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown/with-html';
-import { ProductProps } from './Product';
+import { ProductProps } from './ProductPage';
+import BuyButton from '../../utils/BuyButton';
 
 const ProductContent: React.FC<ProductProps> = (props: ProductProps) => {
-  const { title, desc, src, price, readyToOrder } = props;
+  const { title, desc, pageImage, price, readyToOrder } = props;
 
   return (
     <>
@@ -12,11 +13,11 @@ const ProductContent: React.FC<ProductProps> = (props: ProductProps) => {
         <ReactMarkdown source={desc} escapeHtml={false} />
       </div>
       <div className="mb-16">
-        <img width={350} className="mx-auto" src={src} alt={title} />
+        <img width={350} className="mx-auto" src={pageImage} alt={title} />
       </div>
-      <button type="button" className="btn px-16">
+      <BuyButton className="btn px-16" {...props}>
         Buy Now!
-      </button>
+      </BuyButton>
       <span className="text-sm block mt-2 opacity-75">
         {price.toLocaleString()} USD
       </span>

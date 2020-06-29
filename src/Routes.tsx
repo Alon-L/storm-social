@@ -1,48 +1,23 @@
 import React, { PropsWithChildren } from 'react';
 import { Switch, Route, RouteProps } from 'react-router-dom';
 import giveawayImage from './assets/giveaway/giveaway_image.png';
-import tiktok from './assets/products/tiktok.jpeg';
-import verification from './assets/products/verification.png';
 import Footer from './components/navs/footer/Footer';
 import Navbar from './components/navs/navbar/Navbar';
 import Page404 from './components/pages/404/Page404';
 import About from './components/pages/about/About';
+import Checkout from './components/pages/checkout/Checkout';
 import Contact from './components/pages/contact/Contact';
 import Faq from './components/pages/faq/FAQ';
 import Giveaway, { Giveaways } from './components/pages/giveaway/Giveaway';
 import GrowthResults from './components/pages/growth/GrowthResults';
 import Home from './components/pages/home/Home';
 import Memberships from './components/pages/memberships/Memberships';
-import Product, { ProductProps } from './components/pages/product/Product';
 import ProductArticles from './components/pages/product/ProductArticles';
+import ProductPage from './components/pages/product/ProductPage';
 import ProductFollowers from './components/pages/product/followers/ProductFollowers';
 import Tos from './components/pages/tos';
+import { products } from './components/products';
 import WipNotification from './components/utils/WIPNotification';
-
-const products: (ProductProps & { path: string })[] = [
-  {
-    path: '/products/verification',
-    title: 'Verification',
-    desc:
-      'Instagram Verification is the best way to establish your Brand or Influencer profile. Instagram prioritise verified accounts pushing you or your brand to the top of the search & comment sections, driving more traffic to your desired account!',
-    readyToOrder:
-      'By purchasing this service Storm Social Will provide you with an Instagram Verification Tick to your desired account. Please note when purchasing this service you must require a min. Of 5 featured articles. Don’t have any articles? <a class="underline" href="#">Click here</a>',
-    price: 5999.99,
-    src: verification,
-  },
-  {
-    path: '/products/tiktok',
-    title: 'TikTok',
-    desc:
-      'Why you need this? Having access to to the TikTok Algorithm is the best way to increase your chances to be featured on the #foryoupage helping our clients to go viral!',
-    readyToOrder: `
-By Purchasing the service Storm Social will provide you with the latest TikTok Algorithm.<br /><br />
-Please not the TikTok Algorithm changes frequently. To take full advantage of this service we advise our clients to create as much content as possible before TikTok Update to new algorithm.
-      `,
-    price: 1499.99,
-    src: tiktok,
-  },
-];
 
 const giveaways: Giveaways = {
   current: {
@@ -145,7 +120,7 @@ const Routes: React.FC = () => {
 
       {products.map(product => (
         <FullRoute key={product.path} path={product.path}>
-          <Product {...product} />
+          <ProductPage {...product} />
         </FullRoute>
       ))}
 
@@ -154,6 +129,10 @@ const Routes: React.FC = () => {
       </FullRoute>
       <FullRoute path="/products/instagram">
         <ProductFollowers />
+      </FullRoute>
+
+      <FullRoute path="/checkout">
+        <Checkout />
       </FullRoute>
 
       <FullRoute path="/tos">

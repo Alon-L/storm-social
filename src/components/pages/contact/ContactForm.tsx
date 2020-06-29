@@ -29,6 +29,7 @@ const ContactForm: React.FC = () => {
   return (
     <form className="w-full">
       <input
+        required
         type="text"
         value={name}
         name="name"
@@ -36,7 +37,7 @@ const ContactForm: React.FC = () => {
         onChange={(e: ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
       />
       <input
-        className="contact--form--input"
+        required
         type="text"
         value={email}
         name="email"
@@ -46,7 +47,7 @@ const ContactForm: React.FC = () => {
         }
       />
       <input
-        className="contact--form--input"
+        required
         type="text"
         value={message}
         name="message"
@@ -56,7 +57,7 @@ const ContactForm: React.FC = () => {
         }
       />
       <div className="flex justify-between mt-8">
-        <button className="contact--form--submit" type="submit">
+        <button className="form--submit" type="submit">
           Submit Message
         </button>
         <div className="flex flex-wrap justify-end">

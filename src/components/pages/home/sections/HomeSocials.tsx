@@ -5,10 +5,12 @@ import followers5k from '../../../../assets/socials/followers_5k.png';
 import forbes from '../../../../assets/socials/forbes.png';
 import tiktok from '../../../../assets/socials/tiktok.png';
 import verification from '../../../../assets/socials/verification.png';
-import Social, { SocialProps } from '../../../utils/socials/Social';
-import SocialSlider from '../../../utils/socials/SocialSlider';
+import FollowersSlider from '../../../utils/FollowersSlider';
+import ProductBox, {
+  ProductBoxProps,
+} from '../../../utils/productBox/ProductBox';
 
-const homeSocials: SocialProps[] = [
+const homeProducts: ProductBoxProps[] = [
   {
     route: '/products/verification',
     title: 'Verification',
@@ -17,7 +19,7 @@ const homeSocials: SocialProps[] = [
     src: verification,
   },
   {
-    route: '/products/artices',
+    route: '/products/articles',
     title: 'Articles',
     desc: 'This boosts your online recognition & social media presence.',
     src: forbes,
@@ -61,10 +63,10 @@ const HomeSocials: React.FC = () => {
           <p>Do not wait for tomorrow - start a new life today</p>
         </div>
         <div className="relative flex justify-center items-stretch flex-wrap mb-12 lg:-mx-10">
-          {homeSocials.map(social => (
-            <Social key={social.title} {...social} />
+          {homeProducts.map(product => (
+            <ProductBox key={product.title} {...product} />
           ))}
-          <SocialSlider />
+          <FollowersSlider />
         </div>
       </div>
     </section>

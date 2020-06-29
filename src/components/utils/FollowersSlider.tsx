@@ -1,6 +1,8 @@
 import Slider from 'rc-slider';
 import React, { useState } from 'react';
 import 'rc-slider/assets/index.css';
+import BuyButton from './BuyButton';
+import { ProductQuery, ProductNames } from '../products';
 
 // The number to initially be previewed in the slider
 const initialFollowers = 10000;
@@ -8,8 +10,9 @@ const initialFollowers = 10000;
 // The number of dollars paid per follow
 const costPerFollow = 0.04;
 
-const SocialSlider: React.FC = () => {
+const FollowersSlider: React.FC = () => {
   const [followers, setFollowers] = useState(initialFollowers);
+  const price = followers * costPerFollow;
 
   return (
     <div className="z-10 w-full md:px-10 py-6">
@@ -26,7 +29,7 @@ const SocialSlider: React.FC = () => {
               +{followers.toLocaleString()} Followers
             </h4>
             <p className="opacity-70 text-sm mb-2">
-              {(followers * costPerFollow).toLocaleString()} USD
+              {price.toLocaleString()} USD
             </p>
             <Slider
               defaultValue={initialFollowers}
@@ -40,13 +43,18 @@ const SocialSlider: React.FC = () => {
               }}
             />
           </div>
-          <button type="button" className="btn w-full mt-8 sm:w-1/2">
-            Buy Now!
-          </button>
+          <BuyButton
+            title={`${followers.toLocaleString()} Instagram Followers`}
+            query={ProductQuery.Followers}
+            image={ProductNames.FollowersSlider}
+            price={price}
+            quantity={followers / 1000}
+            className="btn lg:w-1/2 w-full"
+          />
         </div>
       </div>
     </div>
   );
 };
 
-export default SocialSlider;
+export default FollowersSlider;

@@ -1,15 +1,14 @@
 import React from 'react';
 import ProductContent from './ProductContent';
+import { ProductStruct } from '../../products';
 
-export interface ProductProps {
-  title: string;
+export interface ProductProps extends ProductStruct {
   desc: string;
-  src: string;
-  price: number;
   readyToOrder: string;
+  pageImage?: string;
 }
 
-const Product: React.FC<ProductProps> = (props: ProductProps) => {
+const ProductPage: React.FC<ProductProps> = (props: ProductProps) => {
   return (
     <div className="container text-center">
       <div className="lg:w-3/5 mx-auto">
@@ -19,4 +18,4 @@ const Product: React.FC<ProductProps> = (props: ProductProps) => {
   );
 };
 
-export default Product;
+export default ProductPage;

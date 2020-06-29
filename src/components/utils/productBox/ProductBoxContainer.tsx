@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 
-const SocialContainer: React.FC = (props: PropsWithChildren<unknown>) => {
+const ProductBoxContainer: React.FC = (props: PropsWithChildren<unknown>) => {
   const { children } = props;
 
   return (
@@ -8,4 +8,4 @@ const SocialContainer: React.FC = (props: PropsWithChildren<unknown>) => {
   );
 };
 
-export default SocialContainer;
+export default ProductBoxContainer;
