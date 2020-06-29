@@ -22,7 +22,7 @@ const BuyButton: React.FC<BuyButtonProps> = (
   return (
     <div className="mt-8 p-2">
       <Link {...props} to={url} type="button">
-        {children && 'Buy Now!'}
+        {children || 'Buy Now!'}
       </Link>
     </div>
   );
