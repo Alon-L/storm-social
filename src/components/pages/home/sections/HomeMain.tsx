@@ -27,12 +27,12 @@ const HomeMain: React.FC = () => {
                 >
                   Live Giveaway
                 </Link>
-                <button
-                  type="button"
+                <Link
+                  to="/faq"
                   className="btn btn__outline bg-transparent text-white border-white hover:text-gray-200 hover:border-gray-200 w-2/3 sm:w-auto"
                 >
                   How does it work?
-                </button>
+                </Link>
               </div>
             </div>
             <div className="w-2/5 flex flex-col justify-center hidden md:flex">
