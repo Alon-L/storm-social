@@ -29,7 +29,7 @@ const HomeMain: React.FC = () => {
                 </Link>
                 <Link
                   to="/faq"
-                  className="btn btn__outline bg-transparent text-white border-white hover:text-gray-200 hover:border-gray-200 w-2/3 sm:w-auto"
+                  className="btn btn__outline bg-transparent text-white border-white hover:text-gray-400 hover:border-gray-400 w-2/3 sm:w-auto"
                 >
                   How does it work?
                 </Link>
