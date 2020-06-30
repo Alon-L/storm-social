@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import NavbarItem, { NavbarItemProps, NavbarItemType } from './NavbarItem';
 import logo from '../../../assets/logo.png';
 import logoWhite from '../../../assets/logo_white.png';
@@ -86,12 +87,9 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
           </button>
         </div>
         <div>
-          <img
-            src={themedLogo}
-            alt="Logo"
-            width={150}
-            className="block lg:hidden"
-          />
+          <Link to="/" className="block lg:hidden">
+            <img src={themedLogo} alt="Logo" width={150} />
+          </Link>
           <div
             className={`transition-all duration-200 ease-in-out lg:mt-0 lg:flex lg:justify-center lg:w-full ${
               !active && 'hidden'
