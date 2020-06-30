@@ -8,13 +8,13 @@ const teamMembers: AboutTeamMemberProps[] = [
     src: callumhine,
     name: 'Callum Hine',
     role: 'Co-Founder',
-    url: 'https://google.com',
+    url: 'https://www.instagram.com/itscallumhine',
   },
   {
     src: vicewardak,
     name: 'Vice Wardak',
     role: 'Co-Founder',
-    url: 'https://google.com',
+    url: 'https://www.instagram.com/itsvicetho',
   },
 ];
 
