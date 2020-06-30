@@ -10,15 +10,18 @@ button:focus {
   @apply outline-none;
 }
 
-$navbar-height: 136px !global;
-
 @media (max-width: 1024px) {
   // Navbar on mobile is shorter
-  $navbar-height: 109px !global;
+  .full-height {
+    height: calc(100vh - 109px);
+  }
 }
 
-.full-height {
-  height: calc(100vh - #{$navbar-height});
+@media (min-width: 1025px) {
+  // Navbar on mobile is taller
+  .full-height {
+    height: calc(100vh - 136px);
+  }
 }
 
 .hamburger-white {
