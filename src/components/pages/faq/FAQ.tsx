@@ -16,7 +16,6 @@ const faqSections: (FaqSectionSelectorProps & FaqSectionProps)[] = [
   {
     icon: faFlag,
     title: 'Common Questions',
-    desc: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex excepturi ipsum molestias perspiciatis praesentium quis sed sequi, voluptate? Animi atque consequuntur dolorem incidunt libero quam quibusdam quidem similique. Expedita, iure.`,
     questions: [
       {
         question: 'Are these real giveaways?',
@@ -52,8 +51,6 @@ We have the right to Block anyone who speaks negatively about our unlucky winner
   {
     icon: faTags,
     title: 'Products Questions',
-    desc:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex excepturi ipsum molestias perspiciatis praesentium quis sed sequi, voluptate? Animi atque consequuntur dolorem incidunt libero quam quibusdam quidem similique. Expedita, iure.',
     questions: [
       {
         question: 'Are the followers real?',
@@ -98,8 +95,6 @@ If we feel that your application won’t be successful your are entitled to a 10
   {
     icon: faMoneyBillWave,
     title: 'Pricing & Plans',
-    desc:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex excepturi ipsum molestias perspiciatis praesentium quis sed sequi, voluptate? Animi atque consequuntur dolorem incidunt libero quam quibusdam quidem similique. Expedita, iure.',
     questions: [
       {
         question:
@@ -115,8 +110,6 @@ If we feel that your application won’t be successful your are entitled to a 10
   {
     icon: faBook,
     title: 'Usage Guides',
-    desc:
-      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex excepturi ipsum molestias perspiciatis praesentium quis sed sequi, voluptate? Animi atque consequuntur dolorem incidunt libero quam quibusdam quidem similique. Expedita, iure.',
     questions: [
       {
         question:
