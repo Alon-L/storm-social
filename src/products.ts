@@ -86,9 +86,9 @@ Please not the TikTok Algorithm changes frequently. To take full advantage of th
   {
     path: '/products/growth-slot',
     title: 'Giveaway Growth Slot',
-    desc: 'lorem ipsum',
-    readyToOrder: 'lorem ipsum',
-    price: 499.99,
+    desc: 'YUNG BANS',
+    readyToOrder: 'Click BUY NOW and start growing',
+    price: 399.99,
     image: ProductNames.CurrentGiveaway,
     pageImage: giveawayImage,
     query: ProductQuery.CurrentGiveaway,
