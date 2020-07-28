@@ -1,7 +1,7 @@
 import React from 'react';
-import audiusmusic from '../../../assets/growth/results/audiusmusic.png';
-import captweresinking from '../../../assets/growth/results/captweresinking.png';
-import gmoneyeveryday from '../../../assets/growth/results/gmoneyeveryday.png';
+import left from '../../../assets/growth/results/left.png';
+import middle from '../../../assets/growth/results/middle.png';
+import right from '../../../assets/growth/results/right.png';
 
 export interface GrowthResult {
   name: string;
@@ -10,28 +10,16 @@ export interface GrowthResult {
 
 const results: GrowthResult[] = [
   {
-    name: 'audiusmusic',
-    src: audiusmusic,
+    name: 'captweresinking',
+    src: left,
   },
   {
-    name: 'captweresinking',
-    src: captweresinking,
+    name: 'audiusmusic',
+    src: middle,
   },
   {
     name: 'gmoneyeveryday',
-    src: gmoneyeveryday,
-  },
-  {
-    name: 'audiusmusic 2',
-    src: audiusmusic,
-  },
-  {
-    name: 'captweresinking 2',
-    src: captweresinking,
-  },
-  {
-    name: 'gmoneyeveryday 2',
-    src: gmoneyeveryday,
+    src: right,
   },
 ];
 
