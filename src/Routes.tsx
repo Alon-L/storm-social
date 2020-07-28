@@ -22,28 +22,29 @@ import { products } from './products';
 const giveaways: Giveaways = {
   current: {
     desc: `
-Bryce Hall Giveaway
+YUNG BANS GIVEAWAY
 
-Followers - 4M
+FOLLOWERS - 1M+
 
-Estimated Growth - 20K+
-Guaranteed Growth - 10K
+ESTIMATED GROWTH - 15K+
+GUARENTEED GROWTH - 10K
 
-Audience
-USA, UK, AUS
+AUDEINCE
+USA
 
-Giveaway Date
+GIVEAWAY DATE
 07.01.20 - 07.01.20
 
-Prize! $5000 CASH`,
+PRIZE! $5000 ROLEX
+
+T&C’S APPLY`,
     src: giveawayImage,
-    endsAt: new Date('July 27, 2020 00:20:00 GMT+00:00'),
+    endsAt: new Date('Aug 7, 2020 00:18:00 GMT+00:00'),
   },
   previous: {
-    desc: `
-Previous giveaway!`,
+    desc: ``,
     src: giveawayImage,
-    endsAt: new Date(Date.now() + 3500),
+    endsAt: new Date('July 27, 2020 00:18:00 GMT+00:00'),
   },
 };
 
