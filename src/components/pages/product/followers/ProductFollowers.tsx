@@ -47,10 +47,10 @@ const ProductFollowers: React.FC = () => {
       <div className="mb-12 w-4/5 mx-auto">
         <h1 className="text-3xl font-semibold mb-3">Organic Growth</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
-          officia, perferendis porro quisquam quo voluptatem! Cum, cumque
-          dignissimos earum, facilis libero magnam magni nam nostrum odio
-          reprehenderit sunt, veniam vitae.
+          Here at Storm Social we provide 100% Organic Growth through our
+          instagram network. These followers are all REAL! & not bot accounts.
+          This is the best way to grow your influencer or business account to
+          build your online presence!
         </p>
       </div>
       <div className="flex justify-center items-center flex-wrap mb-12 lg:-mx-10">
