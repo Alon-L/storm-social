@@ -192,12 +192,11 @@ button.btn, a.btn {
     }
 
     @media (max-width: 1024px) {
-      width: 600px;
       bottom: 10%;
-    }
 
-    @media (max-width: 640px) {
-      width: 550px;
+      &--image {
+        display: none;
+      }
     }
 
     &--content {
