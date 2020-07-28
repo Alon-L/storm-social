@@ -6,7 +6,7 @@ interface FaqSectionState {
 }
 
 const initialState: FaqSectionState = {
-  selected: 'Products Questions',
+  selected: 'Common Questions',
 };
 
 export const faqSectionSlice = createSlice({

@@ -28,7 +28,7 @@ const FaqSectionQuestion: React.FC<FaqQuestion> = (props: FaqQuestion) => {
         </div>
       </button>
       <SmoothCollapse expanded={active}>
-        <div className="mt-4 mx-6">{answer}</div>
+        <div className="mt-4 mx-6 whitespace-pre-line">{answer}</div>
       </SmoothCollapse>
     </div>
   );
